@@ -335,7 +335,8 @@ cat:ContainerPositionAndQuantity a rdfs:Class, sh:NodeShape ;
         sh:datatype xsd:string
     ] ;
     sh:property [sh:path qudt:quantity ;
-                sh:node cat:Observation ]
+                sh:node cat:Observation ] ;
+    sh:property [sh:path cat:containerID ; sh:datatype xsd:string] .
     .
 
 cat:QuantityShape a sh:NodeShape ;
