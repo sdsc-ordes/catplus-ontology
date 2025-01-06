@@ -347,9 +347,146 @@ allo-res:AFR_0002524 a rdf:Property ;
     skos:definition "A liquid chromatography aggregate document is a document that aggregates LC documents. [Allotrope]"
     .
 
-
-
-
+allo-res:AFR_0002526 a rdf:Property ;
+    skos:prefLabel "device system document" ;
+    skos:definition "A device system document is a document that encompasses the information associated with a device system. [Allotrope]" ;
+    . 
+allo-res:AFR_0002607 a rdf:Property ;
+    skos:prefLabel "" ;
+    skos:definition "" ;
+    . 
+allo-res:AFR_0002083 a rdf:Property ;
+    skos:prefLabel "" ;
+    skos:definition "" ;
+    . 
+allo-res:AFR_0002529 a rdf:Property ;
+    skos:prefLabel "" ;
+    skos:definition "" ;
+    . 
+allo-res:AFR_0002550 a rdf:Property ;
+    skos:prefLabel "" ;
+    skos:definition "" ;
+    . 
+allo-res:AFR_0002551 a rdf:Property ;
+    skos:prefLabel "" ;
+    skos:definition "" ;
+    . 
+allo-res:AFR_0002878 a rdf:Property ;
+    skos:prefLabel "" ;
+    skos:definition "" ;
+    . 
+cat:measure a rdf:Property ;
+    skos:prefLabel "" ;
+    skos:definition "" ;
+    . 
+cat:dimension a rdf:Property ;
+    skos:prefLabel "" ;
+    skos:definition "" ;
+    . 
+allo-res:AFR_0002550 a rdf:Property ;
+    skos:prefLabel "" ;
+    skos:definition "" ;
+    . 
+allo-res:AFR_0002659 a rdf:Property ;
+    skos:prefLabel "" ;
+    skos:definition "" ;
+    . 
+obo:IAO_0000009 a rdf:Property ;
+    skos:prefLabel "" ;
+    skos:definition "" ;
+    . 
+<http://purl.org/linked-data/cube#DataSet> a rdf:Property ;
+    skos:prefLabel "" ;
+    skos:definition "" ;
+    . 
+<http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset> a rdf:Property ;
+    skos:prefLabel "" ;
+    skos:definition "" ;
+    . 
+allo-res:AFR_0000917 a rdf:Property ;
+    skos:prefLabel "" ;
+    skos:definition "" ;
+    . 
+allo-res:AFR_0000432 a rdf:Property ;
+    skos:prefLabel "" ;
+    skos:definition "" ;
+    . 
+allo-res:AFR_0001073 a rdf:Property ;
+    skos:prefLabel "" ;
+    skos:definition "" ;
+    . 
+allo-res:AFR_0001089 a rdf:Property ;
+    skos:prefLabel "" ;
+    skos:definition "" ;
+    . 
+allo-res:AFR_0001164 a rdf:Property ;
+    skos:prefLabel "" ;
+    skos:definition "" ;
+    . 
+allo-res:AFR_0001180 a rdf:Property ;
+    skos:prefLabel "" ;
+    skos:definition "" ;
+    . 
+allo-res:AFR_0000949 a rdf:Property ;
+    skos:prefLabel "" ;
+    skos:definition "" ;
+    . 
+cat:peakHeight a rdf:Property ;
+    skos:prefLabel "" ;
+    skos:definition "" ;
+    . 
+allo-res:AFR_0001178 a rdf:Property ;
+    skos:prefLabel "" ;
+    skos:definition "" ;
+    . 
+allo-res:AFR_0001165 a rdf:Property ;
+    skos:prefLabel "" ;
+    skos:definition "" ;
+    . 
+allo-res:AFR_0001179 a rdf:Property ;
+    skos:prefLabel "" ;
+    skos:definition "" ;
+    . 
+allo-res:AFR_0001181 a rdf:Property ;
+    skos:prefLabel "" ;
+    skos:definition "" ;
+    . 
+allo-res:AFR_0001976 a rdf:Property ;
+    skos:prefLabel "" ;
+    skos:definition "" ;
+    . 
+cat:deviceDocument a rdf:Property ;
+    skos:prefLabel "" ;
+    skos:definition "" ;
+    . 
+allo-res:AFR_0002018 a rdf:Property ;
+    skos:prefLabel "" ;
+    skos:definition "" ;
+    . 
+allo-res:AFR_0002568 a rdf:Property ;
+    skos:prefLabel "" ;
+    skos:definition "" ;
+    . 
+allo-res:AFR_0001258 a rdf:Property ;
+    skos:prefLabel "" ;
+    skos:definition "" ;
+    . 
+allo-res:AFR_0001119 a rdf:Property ;
+    skos:prefLabel "" ;
+    skos:definition "" ;
+    . 
+obo:IAO_0000017 a rdf:Property ;
+    skos:prefLabel "" ;
+    skos:definition "" ;
+    . 
+allo-res:AFR_0001259 a rdf:Property ;
+    skos:prefLabel "" ;
+    skos:definition "" ;
+    . 
+<http://purl.allotrope.org/ontologies/datacube-hdf-map#Index> a rdf:Property ;
+    skos:prefLabel "" ;
+    skos:definition "" ;
+    . 
 
 ###################################################################################################
 # Shapes
@@ -547,13 +684,46 @@ allo-res:AFR_0002375 a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Measurement Document" ;
     skos:definition "A measurement document is a document that encompasses the information associated with a measurement. [Allotrope]" ;
     sh:property [sh:path allo-res:AFR_0001121 ; sh:datatype xsd:string] ; #measurement id
-    sh:property [sh:path allo-res:AFR_0002607 ; sh:class cat:something ] ; #TODO
+    sh:property [sh:path allo-res:AFR_0002607 ; sh:class cat:ChromatographyColumnDocument ] ; #chromatographyColumnDocument -> ChromatographyColumnDocument
     sh:property [sh:path allo-res:AFR_0002722 ; sh:class allo-res:AFR_0002723 ] ; #hasDeviceControlAggregateDocument -> DeviceControlDocument
-    sh:property [sh:path allo-res:AFR_0002083 ; sh:class cat:something ] ; #TODO
+    sh:property [sh:path allo-res:AFR_0002083 ; sh:class cat:SampleDocument ] ; #hasSampleDocument -> cat:SampleDocument
+    sh:property [sh:path allo-res:AFR_0002529 ; sh:class cat:InjectionDocument] ; #injectionDocument -> cat:InjectionDocument
     sh:property [sh:path allo-res:AFR_0002534 ; sh:datatype xsd:string] ; #detection type
-    sh:property [sh:path allo-res:AFR_0001267 ; sh:class cat:something] #TODO
+    sh:property [sh:path allo-res:AFR_0002550 ; sh:class cat:ChromatogramDataCube] ; #chromatogram data cube
+    sh:property [sh:path allo-res:AFR_0002551 ; sh:class cat:ThreeDimensionalUltravioletSpectrumDataCube] ; #three-dimensional ultraviolet spectrum data cube-> ThreeDimensionalUltravioletSpectrumDataCube
+    sh:property [sh:path allo-res:AFR_0002878 ; sh:class cat:ThreeDimensionalMassSpectrumDataCube] ; #three-dimensional mass spectrum data cube -> ThreeDimensionalMassSpectrumDataCube
+
     .
-    
+
+cat:ThreeDimensionalUltravioletSpectrumDataCube
+    #todo label and definition
+    sh:property [sh:path obo:IAO_0000009 ; sh:datatype xsd:string] ; #label
+    sh:property [sh:path <http://purl.org/linked-data/cube#DataSet> ; sh:class cat:something] ; #cube-structure
+    sh:property [sh:path <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset> ; sh:class cat:DataSet] ; #dataset
+    sh:property [sh:path allo-res:AFR_0000917 ; sh:datatype xsd:string] ; #identifier
+    .
+
+cat:ThreeDimensionalMassSpectrumDataCube
+    #todo label and definition
+    sh:property [sh:path obo:IAO_0000009 ; sh:datatype xsd:string] ; #label
+    sh:property [sh:path <http://purl.org/linked-data/cube#DataSet> ; sh:class cat:something] ; #cube-structure
+    sh:property [sh:path <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset> ; sh:class cat:DataSet] ; #dataset
+    sh:property [sh:path allo-res:AFR_0000917 ; sh:datatype xsd:string] ; #identifier
+    .
+
+cat:DataSet a rdfs:Class, sh:NodeShape ;
+    #todo label and definition
+    sh:property [sh:path cat:measure ; sh:class <http://purl.allotrope.org/ontologies/role#AFRL_0000157> ] ; #measure
+    sh:property [sh:path cat:dimension ; sh:class <http://qudt.org/schema/qudt#Dimension>]  #dimension
+    .
+
+cat:CubeDataset a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Cube Dataset" ;
+    #todo definition
+    sh:property [sh:path cat:measure ; sh:class <http://purl.allotrope.org/ontologies/role#AFRL_0000157> ] ; #measure
+    sh:property [sh:path cat:dimension ; sh:class <http://qudt.org/schema/qudt#Dimension>] #dimension
+    .
+
 allo-res:AFR_0002723 a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Device Control Document" ;
     skos:definition "A device control document is a document that encompasses the information associated with control of a device. [Allotrope]" ;
@@ -564,24 +734,29 @@ allo-res:AFR_0002723 a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path obo:IAO_0000017 ; sh:datatype xsd:string] ; #model number
     sh:property [sh:path allo-res:AFR_0001259; sh:datatype xsd:string] ; #firmware version
     sh:property [sh:path allo-res:AFR_0002534 ; sh:datatype xsd:string] ; #detection type
-    sh:property [sh:path allo-res:AFR_0002550 ; sh:class cat:ChromatogramDataCube] #chromatogram data cube
-
+    sh:property [sh:path allo-res:AFR_0002550 ; sh:class cat:ChromatogramDataCube] ; #chromatogram data cube
+    sh:property [sh:path allo-res:AFR_0002659; sh:class cat:ProcessedDataDocument] ; #processed data document -> ProcessedDataDocument
     .
 
-allo-res:SampleDocument a rdfs:Class, sh:NodeShape ;
+
+cat:ChromatographyColumnDocument a rdfs:Class, sh:NodeShape ;
+    #todo label and definition
+    . #todo also this needs properties, but I don't know what they should be.
+
+cat:SampleDocument a rdfs:Class, sh:NodeShape ;
     #todo label and definition
 
     sh:property [sh:path allo-res:AFR_0001118 ; sh:datatype xsd:string] ; #sample identifier
     sh:property [sh:path obo:IAO_0000590; sh:datatype xsd:string ] ; #written name
     .
 
-allo-res:InjectionDocument a rdfs:Class, sh:NodeShape ;
+cat:InjectionDocument a rdfs:Class, sh:NodeShape ;
     #todo label and definition
-    sh:property [sh:path allo-res:AFR_0001267 ; sh:class cat:AutosampleInjectionVolumeSetting ] ; #TODO #autosampler injection volume setting (chromatography)"
+    sh:property [sh:path allo-res:AFR_0001267 ; sh:class cat:AutosamplreInjectionVolumeSetting ] ; #TODO #autosampler injection volume setting (chromatography)"
     sh:property [sh:path allo-res:AFR_0002535 ; sh:datatype xsd:string] ; #injection identifier 
     sh:property [sh:path allo-res:AFR_0002536 ; sh:datatype xsd:dateTime ] ; #injection time
     .
-cat:AutosampleInjectionVolumeSetting a rdfs:Class, sh:NodeShape ;
+cat:AutosamplerInjectionVolumeSetting a rdfs:Class, sh:NodeShape ;
     #todo label and definition
     sh:property [sh:path qudt:value ] ;
     sh:property [sh:path qudt:unit ] ;
@@ -591,9 +766,133 @@ cat:ChromatogramDataCube a rdfs:Class, sh:NodeShape ;
     #todo label and definition
     sh:property [sh:path obo:IAO_0000009 ; sh:datatype xsd:string] ; #label
     sh:property [sh:path <http://purl.org/linked-data/cube#DataSet> ; sh:class cat:something] ; #cube-structure
+    sh:property [sh:path <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset> ; sh:class cat:DataSet] ; #dataset
+    sh:property [sh:path allo-res:AFR_0000917 ; sh:datatype xsd:string] ; #identifier
+    .
+
+cat:ProcessedDataDocument a rdfs:Class, sh:NodeShape ;
+    #todo label and definition
+    sh:property [sh:path allo-res:AFR_0000432 ; sh:class cat:PeakList ;] ; #peak list -> cat:PeakList
+    .
+
+cat:PeakList a rdfs:Class, sh:NodeShape ;
+    #todo label and definition
+    sh:property [sh:path cat:peak ; sh:Class allo-res:AFR_0000413] ; #peak
+    .
+
+allo-res:AFR_0000413 a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Peak" ;
+    skos:definition "A peak describes a part of a spectrum/chromatogram/plot at a definite range of the experimental parameter (independent variable) of the spectrum. This definition includes a single data point of the spectrum. [Allotrope]" ;
+    sh:property [sh:path <http://purl.allotrope.org/ontologies/datacube-hdf-map#Index> ; sh:datatype xsd:integer] ; #index
+    sh:property [sh:path allo-res:AFR_0001073 ; sh:class cat:PeakArea ;
+                sh:node [sh:property [sh:path qudt:unit ;
+                                        sh:hasValue <http://purl.allotrope.org/ontology/qudt-ext/unit#MilliAbsorbanceUnitTimesSecond> ]]] ; #peak area -> cat:PeakArea measured in #mAU.s
+    sh:property [sh:path allo-res:AFR_0001089 ; sh:class cat:RetentionTime ;
+                sh:node [sh:property [sh:path qudt:unit ;
+                                        sh:xone ([sh:hasValue unit:SEC ] 
+                                                [sh:hasValue unit:MIN ] )]]] ; #retention time -> cat:RetentionTime measured in seconds or minutes
+    sh:property [sh:path allo-res:AFR_0001164 ; sh:datatype xsd:string] ; #peak identifier
+    sh:property [sh:path allo-res:AFR_0001180 ; sh:class cat:PeakEnd;
+                sh:node [sh:property [sh:path qudt:unit ;
+                                        sh:xone ([sh:hasValue unit:SEC ] 
+                                                [sh:hasValue unit:MIN ] )]]] ; #peak end -> cat:PeakEnd measured in seconds or minutes]
+    sh:property [sh:path allo-res:AFR_0000949 ; sh:class cat:RelativePeakHeight ; 
+                sh:node [sh:property [sh:path qudt:unit ;
+                                        sh:hasValue unit:Percent]]] ; #relative peak height -> cat:RelativePeakHeight
+    sh:property [sh:path cat:peakHeight ; sh:class cat:PeakHeight ;
+                sh:node [sh:property [sh:path qudt:unit ;
+                                        sh:hasValue <http://purl.allotrope.org/ontology/qudt-ext/unit#MilliAbsorbanceUnit> ]]] ; #peak height -> cat:PeakHeight measured in mAU
+    sh:property [sh:path allo-res:AFR_0001178 ; sh:class cat:PeakStart ;
+                sh:node [sh:property [sh:path qudt:unit ;
+                                        sh:xone ([sh:hasValue unit:SEC ] 
+                                                [sh:hasValue unit:MIN ] )]]] ; #peak start -> cat:PeakStart measured in seconds or minutes]
+    sh:property [sh:path allo-res:AFR_0001165 ; sh:class cat:RelatiePeakArea ;
+                sh:node [sh:property [sh:path qudt:unit ;
+                                        sh:hasValue unit:Percent]]] ; #relative peak area -> cat:RelatiePeakArea measured in percent
+    sh:property [sh:path allo-res:AFR_0001179 ; sh:class cat:PeakValueAtStart ;
+                sh:node [sh:property [sh:path qudt:unit ;
+                                        sh:hasValue <http://purl.allotrope.org/ontology/qudt-ext/unit#MilliAbsorbanceUnit> ]]] ; #peak value at start -> cat:PeakValueAtStart measured in mAU
+    sh:property [sh:path allo-res:AFR_0001181 ; sh:class cat:PeakValueAtEnd ; #peak value at end -> cat:PeakValueAtEnd
+                sh:node [sh:property [sh:path qudt:unit ;
+                                        sh:hasValue <http://purl.allotrope.org/ontology/qudt-ext/unit#MilliAbsorbanceUnit> ]]] ; #peak value at end -> cat:PeakValueAtEnd measured in mAU
+    .
+
+cat:DeviceSystemDocument a rdfs:Class, sh:NodeShape ;
+    #todo label and definition
+    sh:property [sh:path allo-res:AFR_0001976 ; sh:datatype xsd:string] ; #asset management identifier
+    sh:property [sh:path cat:deviceDocument ; sh:class allo-res:AFR_0002567] ; #device document -> cat:DeviceDocument
+    .
+
+allo-res:AFR_0002567 a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Device Document" ;
+    skos:definition "A device document is a document that encompasses the information associated with a device. [Allotrope]" ;
+    sh:property [sh:path allo-res:AFR_0002018 ; sh:datatype xsd:string] ; #device ID
+    sh:property [sh:path allo-res:AFR_0002568 ; sh:datatype xsd:string] ; #device type
+    sh:property [sh:path allo-res:AFR_0001258 ; sh:datatype xsd:string] ; #product manufacturer
+    sh:property [sh:path allo-res:AFR_0001119 ; sh:datatype xsd:string] ; #equipment serial number
+    sh:property [sh:path obo:IAO_0000017 ; sh:datatype xsd:string] ; #model number
+    sh:property [sh:path allo-res:AFR_0001259; sh:datatype xsd:string] ; #firmware version
+    sh:property [sh:path <http://purl.allotrope.org/ontologies/datacube-hdf-map#Index> ; sh:datatype xsd:integer] ; #index
     .
 
 
+cat:peakHeight a rdf:Property ;
+    #todo definition and label
+    .
+
+cat:PeakArea a rdfs:Class, sh:NodeShape ;
+    #todo label and definition
+    sh:property [sh:path qudt:value] ;
+    sh:property [sh:path qudt:unit] ;
+    .
+
+cat:RetentionTime a rdfs:Class, sh:NodeShape ;
+    #todo label and definition
+    sh:property [sh:path qudt:value] ;
+    sh:property [sh:path qudt:unit] ;
+    .
+
+cat:PeakEnd a rdfs:Class, sh:NodeShape ;
+    #todo label and definition
+    sh:property [sh:path qudt:value] ;
+    sh:property [sh:path qudt:unit] ;
+    .
+
+cat:RelativePeakHeight a rdfs:Class, sh:NodeShape ;
+    #todo label and definition
+    sh:property [sh:path qudt:value] ;
+    sh:property [sh:path qudt:unit] ;
+    .
+
+cat:PeakHeight a rdfs:Class, sh:NodeShape ;
+    #todo label and definition
+    sh:property [sh:path qudt:value] ;
+    sh:property [sh:path qudt:unit] ;
+    .
+
+cat:PeakStart a rdfs:Class, sh:NodeShape ;
+    #todo label and definition
+    sh:property [sh:path qudt:value] ;
+    sh:property [sh:path qudt:unit] ;
+    .
+
+cat:RelatiePeakArea a rdfs:Class, sh:NodeShape ;
+    #todo label and definition
+    sh:property [sh:path qudt:value] ;
+    sh:property [sh:path qudt:unit] ;
+    .
+
+cat:PeakValueAtStart a rdfs:Class, sh:NodeShape ;
+    #todo label and definition
+    sh:property [sh:path qudt:value] ;
+    sh:property [sh:path qudt:unit] ;
+    .
+
+cat:PeakValueAtEnd a rdfs:Class, sh:NodeShape ;
+    #todo label and definition
+    sh:property [sh:path qudt:value] ;
+    sh:property [sh:path qudt:unit] ;
+    .
 
 
 cat:temperatureTumbleStirrerShape a sh:PropertyShape ;
