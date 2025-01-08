@@ -728,6 +728,22 @@ cat:CubeDataset a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path cat:dimension ; sh:class <http://qudt.org/schema/qudt#Dimension>] ; #dimension
     .
 
+<http://qudt.org/schema/qudt#Dimension> a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Dimension" ;
+    skos:definition "A measurable extent of a particular kind, such as length, width, height, or time, in a specified context." ;
+    sh:property [sh:path <http://purl.allotrope.org/ontologies/datacube#componentDataType> ] ; #component datatype
+    sh:property [sh:path rdfs:label ; sh:datatype xsd:string ] ; #concept
+    sh:property [sh:path qudt:unit ; sh:class <http://qudt.org/schema/qudt#Unit> ] ; #unit
+    .
+
+<http://purl.allotrope.org/ontologies/role#AFRL_0000157> a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Measure" ;
+    skos:definition "A measure is an actual value that is the direct or indirect outcome of some measurement and refers to some metric. [Allotrope]" ;
+    sh:property [sh:path <http://purl.allotrope.org/ontologies/datacube#componentDataType> ] ; #component datatype
+    sh:property [sh:path rdfs:label ; sh:datatype xsd:string ] ; #concept
+    sh:property [sh:path qudt:unit ; sh:class <http://qudt.org/schema/qudt#Unit> ] ; #unit
+    .
+
 cat:ChromatographyColumnDocument a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Chromatography Column Document" ;
     skos:definition "A document that contains metadata and information about a chromatography column used in experiments." ;
