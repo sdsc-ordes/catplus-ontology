@@ -24,6 +24,7 @@ prefix allo-role: <http://purl.allotrope.org/ontologies/role#>
 prefix allo-com: <http://purl.allotrope.org/ontologies/common#>
 prefix allo-mat: <http://purl.allotrope.org/ontologies/material#>
 prefix obo: <http://purl.obolibrary.org/obo/>
+prefix qb: <http://purl.org/linked-data/cube#> 
 
 
 #ontology for catalysis, chemistry
@@ -432,7 +433,7 @@ obo:IAO_0000009 a rdf:Property;
   skos:definition "A label is a symbol that is part of some other datum and is used to either partially define  the denotation of that datum or to provide a means for identifying the datum as a member of the set of data with the same label [IAO]";
   skos:prefLabel "datum label" .
 
-<http://purl.org/linked-data/cube#DataSet> a rdf:Property;
+qb:DataSet a rdf:Property;
   skos:definition "Represents a collection of observations, possibly organized into various slices, conforming to some common dimensional structure. [QB]";
   skos:prefLabel "data cube" .
 
@@ -789,7 +790,7 @@ cat:ThreeDimensionalUltravioletSpectrumDataCube a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Three-Dimensional Ultraviolet Spectrum Data Cube" ;
     skos:definition "A data structure representing a three-dimensional cube of ultraviolet spectral data, often used for analyzing spectroscopic information across multiple dimensions." ;
     sh:property [sh:path obo:IAO_0000009 ; sh:datatype xsd:string] ; #label
-    sh:property [sh:path <http://purl.org/linked-data/cube#DataSet> ; sh:class cat:something] ; #cube-structure
+    sh:property [sh:path qb:DataSet ; sh:class cat:something] ; #cube-structure
     sh:property [sh:path <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset> ; sh:class cat:DataSet] ; #dataset
     sh:property [sh:path allo-res:AFR_0000917 ; sh:datatype xsd:string] ; #identifier
     .
@@ -798,7 +799,7 @@ cat:ThreeDimensionalMassSpectrumDataCube a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Three-Dimensional Mass Spectrum Data Cube" ;
     skos:definition "A data structure representing a three-dimensional cube of mass spectrometry data, used to analyze molecular compositions and fragmentations across dimensions." ;
     sh:property [sh:path obo:IAO_0000009 ; sh:datatype xsd:string] ; #label
-    sh:property [sh:path <http://purl.org/linked-data/cube#DataSet> ; sh:class cat:something] ; #cube-structure
+    sh:property [sh:path qb:DataSet ; sh:class cat:something] ; #cube-structure
     sh:property [sh:path <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset> ; sh:class cat:DataSet] ; #dataset
     sh:property [sh:path allo-res:AFR_0000917 ; sh:datatype xsd:string] ; #identifier
     .
@@ -864,7 +865,7 @@ cat:ChromatogramDataCube a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Chromatogram Data Cube" ;
     skos:definition "A three-dimensional representation of chromatographic data, enabling analysis of time, intensity, and other parameters." ;
     sh:property [sh:path obo:IAO_0000009 ; sh:datatype xsd:string] ; #label
-    sh:property [sh:path <http://purl.org/linked-data/cube#DataSet> ; sh:class cat:something] ; #cube-structure
+    sh:property [sh:path qb:DataSet ; sh:class cat:something] ; #cube-structure
     sh:property [sh:path <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset> ; sh:class cat:DataSet] ; #dataset
     sh:property [sh:path allo-res:AFR_0000917 ; sh:datatype xsd:string] ; #identifier
     .
