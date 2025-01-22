@@ -664,7 +664,6 @@ cat:QuantityShape a sh:NodeShape ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:xone ([ sh:hasValue unit:MilliGM ] 
-        sh:xone ([ sh:hasValue unit:MilliGM ] 
                 [sh:hasValue unit:MilliL ] )]
     .
 
@@ -673,7 +672,6 @@ cat:Observation a rdfs:Class, sh:NodeShape ;
     skos:definition "An observation is an abstract entity that captures the unit and value of a property into one node." ;
     sh:property [sh:path qudt:unit  ; sh:minCount 1 ; sh:maxCount 1] ;
     sh:property [sh:path qudt:value ; sh:minCount 1 ; sh:maxCount 1] ;
-    sh:property [sh:path cat:errorMargin ; 
     sh:property [sh:path cat:errorMargin ; 
                 sh:node [sh:property [sh:path qudt:unit ; sh:minCount 1 ], [sh:path qudt:value ; sh:minCount 1 ]]] ;
     .
@@ -720,7 +718,6 @@ obo:CHEBI_25367 a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path schema:keywords ; sh:datatype xsd:string] ; #keywords
     sh:property [sh:path allo-res:AFR_0001952 ; sh:datatype xsd:string] ; #molecular formula
     sh:property [sh:path allo-res:AFR_0002296 ; sh:datatype xsd:string] ; #inchi key
-    sh:property [sh:path obo:PATO_0001019 ;
     sh:property [sh:path obo:PATO_0001019 ;
                  sh:node [sh:property [sh:path qudt:unit ;
                                         sh:hasValue unit:GM-PER-MilliL]]] ; #mass densitity
@@ -791,7 +788,7 @@ cat:ThreeDimensionalUltravioletSpectrumDataCube a rdfs:Class, sh:NodeShape ;
     skos:definition "A data structure representing a three-dimensional cube of ultraviolet spectral data, often used for analyzing spectroscopic information across multiple dimensions." ;
     sh:property [sh:path obo:IAO_0000009 ; sh:datatype xsd:string] ; #label
     sh:property [sh:path qb:DataSet ; sh:class cat:something] ; #cube-structure
-    sh:property [sh:path <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset> ; sh:class cat:DataSet] ; #dataset
+    sh:property [sh:path allo-hdf:Dataset ; sh:class cat:DataSet] ; #dataset
     sh:property [sh:path allo-res:AFR_0000917 ; sh:datatype xsd:string] ; #identifier
     .
 
@@ -800,38 +797,38 @@ cat:ThreeDimensionalMassSpectrumDataCube a rdfs:Class, sh:NodeShape ;
     skos:definition "A data structure representing a three-dimensional cube of mass spectrometry data, used to analyze molecular compositions and fragmentations across dimensions." ;
     sh:property [sh:path obo:IAO_0000009 ; sh:datatype xsd:string] ; #label
     sh:property [sh:path qb:DataSet ; sh:class cat:something] ; #cube-structure
-    sh:property [sh:path <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset> ; sh:class cat:DataSet] ; #dataset
+    sh:property [sh:path allo-hdf:Dataset ; sh:class cat:DataSet] ; #dataset
     sh:property [sh:path allo-res:AFR_0000917 ; sh:datatype xsd:string] ; #identifier
     .
 
 cat:DataSet a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Dataset" ;
     skos:definition "A collection of related data, structured in a way that enables efficient retrieval, processing, and analysis." ;
-    sh:property [sh:path cat:measure ; sh:class <http://purl.allotrope.org/ontologies/role#AFRL_0000157> ] ; #measure
-    sh:property [sh:path cat:dimension ; sh:class <http://qudt.org/schema/qudt#Dimension>] ; #dimension
+    sh:property [sh:path cat:measure ; sh:class allo-role:AFRL_0000157 ] ; #measure
+    sh:property [sh:path cat:dimension ; sh:class cat:Dimension] ; #dimension
     .
 
 cat:CubeDataset a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Cube Dataset" ;
     skos:definition "A dataset represented as a multidimensional cube, used for structured data analysis in various contexts such as spectroscopy and mass spectrometry." ;
-    sh:property [sh:path cat:measure ; sh:class <http://purl.allotrope.org/ontologies/role#AFRL_0000157> ] ; #measure
-    sh:property [sh:path cat:dimension ; sh:class <http://qudt.org/schema/qudt#Dimension>] ; #dimension
+    sh:property [sh:path cat:measure ; sh:class allo-role:AFRL_0000157 ] ; #measure
+    sh:property [sh:path cat:dimension ; sh:class cat:Dimension] ; #dimension
     .
 
-<http://qudt.org/schema/qudt#Dimension> a rdfs:Class, sh:NodeShape ;
+cat:Dimension a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Dimension" ;
     skos:definition "A measurable extent of a particular kind, such as length, width, height, or time, in a specified context." ;
     sh:property [sh:path <http://purl.allotrope.org/ontologies/datacube#componentDataType> ] ; #component datatype
     sh:property [sh:path rdfs:label ; sh:datatype xsd:string ] ; #concept
-    sh:property [sh:path qudt:unit ; sh:class <http://qudt.org/schema/qudt#Unit> ] ; #unit
+    sh:property [sh:path qudt:unit ; sh:class qudt:Unit ] ; #unit
     .
 
-<http://purl.allotrope.org/ontologies/role#AFRL_0000157> a rdfs:Class, sh:NodeShape ;
+allo-role:AFRL_0000157 a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Measure" ;
     skos:definition "A measure is an actual value that is the direct or indirect outcome of some measurement and refers to some metric. [Allotrope]" ;
     sh:property [sh:path <http://purl.allotrope.org/ontologies/datacube#componentDataType> ] ; #component datatype
     sh:property [sh:path rdfs:label ; sh:datatype xsd:string ] ; #concept
-    sh:property [sh:path qudt:unit ; sh:class <http://qudt.org/schema/qudt#Unit> ] ; #unit
+    sh:property [sh:path qudt:unit ; sh:class qudt:Unit ] ; #unit
     .
 
 cat:ChromatographyColumnDocument a rdfs:Class, sh:NodeShape ;
@@ -866,7 +863,7 @@ cat:ChromatogramDataCube a rdfs:Class, sh:NodeShape ;
     skos:definition "A three-dimensional representation of chromatographic data, enabling analysis of time, intensity, and other parameters." ;
     sh:property [sh:path obo:IAO_0000009 ; sh:datatype xsd:string] ; #label
     sh:property [sh:path qb:DataSet ; sh:class cat:something] ; #cube-structure
-    sh:property [sh:path <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset> ; sh:class cat:DataSet] ; #dataset
+    sh:property [sh:path allo-hdf:Dataset ; sh:class cat:DataSet] ; #dataset
     sh:property [sh:path allo-res:AFR_0000917 ; sh:datatype xsd:string] ; #identifier
     .
 
