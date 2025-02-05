@@ -1017,12 +1017,35 @@ cat:vialShape a sh:PropertyShape ;
     sh:node cat:dataParameterTRShape;
     .
 
-cat:dataParameterTRShape a sh:NodeShape ;
+cat:singleChannelSampleSpectrum a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Single Channel Sample Spectrum" ;
+    skos:definition "It refers to the raw infrared spectrum collected directly from the sample without any background or reference correction. This spectrum represents the intensity of IR light that the sample transmits or absorbs at each wavelength." ;
+    sh:node cat:dataParameterShape ;
+    .
+
+
+cat:singleChannelRefBlock a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Single Channel Reference Block" ;
+    skos:definition "It refers to the spectrum collected from the background measurement. This reference spectrum captures the baseline IR intensity, allowing for comparison and correction when analyzing the sample spectrum." ;
+    sh:node cat:dataParameterShape ;
+    .
+
+<http://purl.allotrope.org/ontologies/result#AFR_0002008> a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Reference" ;
+    skos:definition "A reference is an information content entity that is referred to in another information content entity for the purpose of comparison. [Allotrope]" ;
+    
+    .
+
+cat:dataParameterShape a sh:NodeShape ;
     sh:property cat:numberDataPointShape ;
     sh:property cat:frequencyFirstPointShape ;
     sh:property cat:frequencyLastPointShape ;
     sh:property cat:scaleFactorShape ;
-
+    sh:property cat:maximumShape ;
+    sh:property cat:minimumShape ;
+    sh:property cat:dateShape ;
+    sh:property cat:timeShape ;
+    sh:property cat:xUnits ;
 .
     
 
@@ -1045,3 +1068,36 @@ cat:scaleFactorShape a sh:PropertyShape ;
     sh:path <http://purl.allotrope.org/ontologies/hdf5/1.8#scaleFactor> ;
     sh:datatype xsd:double ;
     .
+cat:maximumShape a sh:PropertyShape ;
+    sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002441> ;
+    .
+
+cat:minimumShape a sh:PropertyShape ;
+    sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002440> ;
+    .
+
+cat:dateShape a sh:PropertyShape ;
+    sh:path <http://purl.allotrope.org/ontologies/result#AFR_0000622> ; #TODO
+    .
+
+cat:timeShape a sh:PropertyShape ;
+    sh:path <http://purl.allotrope.org/ontologies/result#AFR_0000952> ;
+    sh:datatype xsd:dateTime ;
+    .
+
+cat:xUnits a sh:PropertyShape ;
+    sh:path qudt:unit ;
+    sh:xone ([ sh:hasValue "WN" ] 
+            [sh:hasValue "MI" ] 
+            [sh:hasValue "NM" ] 
+            [sh:hasValue "LGW" ] 
+            [sh:hasValue "MIN" ] 
+            [sh:hasValue "SEC" ] 
+            [sh:hasValue "PNT" ] 
+            [sh:hasValue "EV" ] 
+            [sh:hasValue "MM" ] 
+            [sh:hasValue "CM"]
+            [sh:hasValue "MIS"]
+            [sh:hasValue "MUS"])#TODO make into qudt units
+    .
+
