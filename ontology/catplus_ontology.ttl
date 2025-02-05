@@ -1004,3 +1004,42 @@ cat:vialShape a sh:PropertyShape ;
         [ sh:hasValue "sample vial" ]
         [ sh:hasValue "other" ]
     ) .
+
+
+##########################################################################################
+# IR stuff
+
+<http://purl.allotrope.org/ontologies/result#AFR_0002261> a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Transmittance" ;
+    skos:definition "A transmittance is a quality quantification facet that quantifies the ratio of the transmitted radiant power (P_λ) to that incident on the sample (P0_λ): T = P_λ/ P0_λ. [IUPAC]" ;
+    sh:node cat:dataParameterTRShape;
+    .
+
+cat:dataParameterTRShape a sh:NodeShape ;
+    sh:property cat:numberDataPointShape ;
+    sh:property cat:frequencyFirstPointShape ;
+    sh:property cat:frequencyLastPointShape ;
+    sh:property cat:scaleFactorShape ;
+
+.
+    
+
+cat:numberDataPointShape a sh:PropertyShape ;
+    sh:path <http://purl.allotrope.org/ontologies/result#AFR_0000186> ;
+    sh:datatype xsd:integer ;
+    .
+
+cat:frequencyFirstPointShape a sh:PropertyShape ;
+    sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001732> ;
+    sh:datatype xsd:double ;
+    .
+
+cat:frequencyLastPointShape a sh:PropertyShape ;
+    sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001732> ;
+    sh:datatype xsd:double ;
+    .
+
+cat:scaleFactorShape a sh:PropertyShape ;
+    sh:path <http://purl.allotrope.org/ontologies/hdf5/1.8#scaleFactor> ;
+    sh:datatype xsd:double ;
+    .
