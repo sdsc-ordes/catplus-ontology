@@ -519,9 +519,9 @@ allo-dchdf:Index a rdf:Property;
   skos:definition "An index is part of index structure definition and defined for at least one dimension component of a data structure definition. [Allotrope]";
   skos:prefLabel "index" .
 
-cat:peakHeight a rdf:Property ;
+allo-res:AFR_0000948 a rdf:Property ;
     skos:prefLabel "Peak Height" ;
-    skos:definition "A property representing the height of a peak in a chromatogram or spectrum, measured from the baseline to the peak maximum." ;
+    skos:definition "The distance between the peak maximum and the peak base, measured in a direction parallel to the axis representing the detector response resp. the measured quantity. [IUPAC Orange Book]" ;
     .
 
 
@@ -640,19 +640,19 @@ cat:Cartridge a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path cat:cartridgeComposition ; sh:datatype xsd:string ] ; #cartridgeComposition
     .
 
-cat:ContainerPositionAndQuantity a rdfs:Class, sh:NodeShape ;
-    skos:prefLabel "Container, Position and Quantity" ;
-    rdfs:comment    """A class that represents the containers, positions and quantities of a sample.
-                    It must have a value for the well location identifier property, and a property called 'quantity' that has 3 representations of the same quantity with different units and values. 
-                    The units are MilliL and MilliGM.""" ;
-    skos:definition "Refers to specific aspects related to the handling and organization of samples or materials" ;
-    sh:property [
-        sh:path allo-res:AFR_0002240 ;                 #Well location identifier, also known as "position"
-        sh:datatype xsd:string
-    ] ;
-    sh:property [sh:path qudt:quantity ;
-                sh:node cat:Observation ]
-    .
+# cat:ContainerPositionAndQuantity a rdfs:Class, sh:NodeShape ;
+#     skos:prefLabel "Container, Position and Quantity" ;
+#     rdfs:comment    """A class that represents the containers, positions and quantities of a sample.
+#                     It must have a value for the well location identifier property, and a property called 'quantity' that has 3 representations of the same quantity with different units and values. 
+#                     The units are MilliL and MilliGM.""" ;
+#     skos:definition "Refers to specific aspects related to the handling and organization of samples or materials" ;
+#     sh:property [
+#         sh:path allo-res:AFR_0002240 ;                 #Well location identifier, also known as "position"
+#         sh:datatype xsd:string
+#     ] ;
+#     sh:property [sh:path qudt:quantity ;
+#                 sh:node cat:Observation ]
+#     .
 
 cat:QuantityShape a sh:NodeShape ;
     sh:targetObjectsOf qudt:quantity ;
@@ -762,6 +762,13 @@ cat:Batch a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path cat:optimizationType ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:hasChemical ; sh:class obo:CHEBI_25367] ;
     .
+
+cat:Well a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Well" ;
+    skos:definition "A well is a small container used to hold samples or reagents in an experiment." ; 
+    sh:property [sh:path allo-res:AFR_0002240 ; sh:datatype xsd:string] ; #Well location identifier
+    sh:property [sh:path cat:hasSample ; sh:class cat:Sample] ;
+    .   
 
 allo-res:AFR_0002525 a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Liquid Chromatography Document" ;
@@ -896,7 +903,7 @@ allo-res:AFR_0000413 a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path allo-res:AFR_0001164 ; sh:datatype xsd:string ] ; #peak identifier
     sh:property [sh:path allo-res:AFR_0001178 ; sh:class cat:PeakStart] ; #peak start
     sh:property [sh:path allo-res:AFR_0001180 ; sh:class cat:PeakEnd] ; #peak end
-    sh:property [sh:path allo-res:AFR_0001181 ; sh:class cat:PeakHeight] ; #peak height
+    sh:property [sh:path allo-res:AFR_0000948 ; sh:class cat:PeakHeight] ; #peak height
     sh:property [sh:path allo-res:AFR_0000949 ; sh:class cat:RelativePeakHeight] ; #relative peak height
     sh:property [sh:path allo-res:AFR_0001179 ; sh:class cat:PeakValueAtStart] ; #peak value at start
     sh:property [sh:path allo-res:AFR_0001181 ; sh:class cat:PeakValueAtEnd] ; #peak value at end
