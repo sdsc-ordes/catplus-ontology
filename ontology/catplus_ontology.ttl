@@ -747,6 +747,7 @@ cat:Campaign a rdfs:Class, sh:NodeShape ;
                                   [ sh:hasValue "discovery"]) ; ] ;
     sh:property [sh:path allo-res:AFR_0002764 ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:hasBatch ; sh:class cat:Batch] ;
+    sh:property [sh:path cat:hasObjective ; sh:class obo:IAO_0000005] ;
     .
 
 cat:Batch a rdfs:Class, sh:NodeShape ;
@@ -759,7 +760,6 @@ cat:Batch a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path allo-res:AFR_0002764 ; sh:datatype xsd:string] ;
     sh:property [sh:path allo-hdf:HardLink ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:optimizationType ; sh:datatype xsd:string] ;
-    sh:property [sh:path cat:hasObjective ; sh:class obo:IAO_0000005] ;
     sh:property [sh:path cat:hasChemical ; sh:class obo:CHEBI_25367] ;
     .
 
@@ -881,12 +881,33 @@ cat:PeakList a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path cat:peak ; sh:class allo-res:AFR_0000413] ; #peak
     .
 
+allo-res:AFR_0000413 a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Peak" ;
+    skos:definition "A peak describes a part of a spectrum/chromatogram/plot at a definite range of the experimental parameter (independent variable) of the spectrum. This definition includes a single data point of the spectrum. [Allotrope]" ;
+    sh:property [sh:path <http://purl.allotrope.org/ontologies/datacube-hdf-map#Index> ; sh:datatype xsd:integer] ; #index
+    sh:property [sh:path allo-res:AFR_0001073 ; sh:class cat:PeakArea] ; #peak area
+    sh:property [sh:path allo-res:AFR_0001089 ; sh:class cat:RetentionTime ] ; #retentiontime
+    sh:property [sh:path allo-res:AFR_0001164 ; sh:datatype xsd:string ] ; #peak identifier
+    sh:property [sh:path allo-res:AFR_0001178 ; sh:class cat:PeakStart] ; #peak start
+    sh:property [sh:path allo-res:AFR_0001180 ; sh:class cat:PeakEnd] ; #peak end
+    sh:property [sh:path allo-res:AFR_0001181 ; sh:class cat:PeakHeight] ; #peak height
+    sh:property [sh:path allo-res:AFR_0000949 ; sh:class cat:RelativePeakHeight] ; #relative peak height
+    sh:property [sh:path allo-res:AFR_0001179 ; sh:class cat:PeakValueAtStart] ; #peak value at start
+    sh:property [sh:path allo-res:AFR_0001181 ; sh:class cat:PeakValueAtEnd] ; #peak value at end
+    sh:property [sh:path allo-res:AFR_0001165 ; sh:class cat:RelativePeakArea] ; #relative peak area
+    sh:property [sh:path allo-res:AFR_0002551 ; sh:class cat:ThreeDimensionalUltravioletSpectrumDataCube] ; #three-dimensional ultraviolet spectrum data cube
+    sh:property [sh:path allo-res:AFR_0002878 ; sh:class cat:ThreeDimensionalMassSpectrumDataCube] ; #three-dimensional mass spectrum data cube
+    sh:property [sh:path allo-res:AFR_0002526 ; sh:class cat:DeviceSystemDocument ] ; #device system document
+    sh:property [sh:path allo-res:AFR_0001976 ; sh:datatype xsd:string] ; #asset management identifier 
+    .
+
 cat:DeviceSystemDocument a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Device System Document" ;
     skos:definition "A document describing a system of devices, including identifiers and associated metadata for asset management." ;
     sh:property [sh:path allo-res:AFR_0001976 ; sh:datatype xsd:string] ; #asset management identifier
     sh:property [sh:path cat:deviceDocument ; sh:class allo-res:AFR_0002567] ; #device document
     .
+    
 allo-res:AFR_0002567 a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Device Document" ;
     skos:definition "A device document is a document that encompasses the information associated with a device. [Allotrope]" ;
