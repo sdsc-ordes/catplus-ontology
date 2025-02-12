@@ -785,6 +785,12 @@ allo-res:AFR_0002375 a rdfs:Class, sh:NodeShape ;
 
     .
 
+allo-res:AFR_0002723 a sh:NodeShape, rdfs:Class ;
+    rdfs:subClassOf allo-res:AFR_0002567 ;
+    skos:prefLabel "Device Control Document" ;
+    skos:definition "A device control document is a document that encompasses the information associated with a device control. [Allotrope]" ;
+    .
+
 cat:ThreeDimensionalUltravioletSpectrumDataCube a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Three-Dimensional Ultraviolet Spectrum Data Cube" ;
     skos:definition "A data structure representing a three-dimensional cube of ultraviolet spectral data, often used for analyzing spectroscopic information across multiple dimensions." ;
@@ -810,7 +816,7 @@ cat:Dataframe a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path cat:dimension ; sh:class cat:Dimension] ; #dimension
     .
 
-cat:CubeDataset a rdfs:Class, sh:NodeShape ;
+cat:CubeStructure a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Cube Dataset" ;
     skos:definition "A dataset represented as a multidimensional cube, used for structured data analysis in various contexts such as spectroscopy and mass spectrometry." ;
     sh:property [sh:path cat:measure ; sh:class allo-role:AFRL_0000157 ] ; #measure
@@ -864,7 +870,7 @@ cat:ChromatogramDataCube a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Chromatogram Data Cube" ;
     skos:definition "A three-dimensional representation of chromatographic data, enabling analysis of time, intensity, and other parameters." ;
     sh:property [sh:path obo:IAO_0000009 ; sh:datatype xsd:string] ; #label
-    sh:property [sh:path qb:DataSet ; sh:class cat:something] ; #cube-structure
+    sh:property [sh:path qb:DataSet ; sh:class cat:CubeStructure] ; #cube-structure
     sh:property [sh:path allo-hdf:Dataset ; sh:class cat:Dataframe] ; #dataset
     sh:property [sh:path allo-res:AFR_0000917 ; sh:datatype xsd:string] ; #identifier
     .
