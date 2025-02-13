@@ -743,8 +743,9 @@ cat:Campaign a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path schema:description ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:genericObjective ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:campaignClass ; sh:datatype xsd:string ;
-                         sh:xone ([ sh:hasValue "optimization"]
-                                  [ sh:hasValue "discovery"]) ; ] ;
+                         sh:xone ([ sh:hasValue "Open Research"]
+                                  [ sh:hasValue "Standard Research"]
+                                  [ sh:hasValue "High level of Confidentiality"]) ; ] ;
     sh:property [sh:path allo-res:AFR_0002764 ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:hasBatch ; sh:class cat:Batch] ;
     .
