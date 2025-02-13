@@ -1101,3 +1101,61 @@ cat:xUnits a sh:PropertyShape ;
             [sh:hasValue "MUS"])#TODO make into qudt units
     .
 
+<http://purl.allotrope.org/ontologies/process#AFP_0003095> a sh:NodeShape, rdfs:Class ;
+    skos:prefLabel "Acquisition Parameters" ;
+    <http://purl.allotrope.org/ontologies/result#AFR_0002045>
+
+<http://purl.allotrope.org/ontologies/result#AFR_0002612>
+<http://purl.allotrope.org/ontologies/result#AFR_0001625>
+<http://purl.allotrope.org/ontologies/result#AFR_0002998>
+<http://purl.allotrope.org/ontologies/result#AFR_0002999>
+<http://purl.allotrope.org/ontologies/process#AFP_0002666>
+<http://purl.allotrope.org/ontologies/result#AFR_0003051>
+<http://purl.allotrope.org/ontologies/result#AFR_0000251>
+<http://purl.allotrope.org/ontologies/result#AFR_0001619>
+<http://purl.allotrope.org/ontologies/quality#AFQ_0000201>
+<http://purl.allotrope.org/ontologies/quality#AFQ_0000201>
+<http://qudt.org/schema/qudt#Unit>
+<http://qudt.org/schema/qudt#Unit>
+cat:correlationMode
+.
+
+<http://purl.allotrope.org/ontologies/role#AFRL_0000028> a sh:NodeShape, rdfs:Class ;
+    skos:prefLabel "Setting datum" ;
+    skos:definition "Setting datum is the contextual role of an information object that specifies some device or process setting. [Allotrope]" ;
+sh:property [sh:path <http://purl.allotrope.org/ontologies/hdf5/1.8#scaleFactor> ; 
+sh:property [sh:path <http://purl.org/dc/terms/date> ; 
+sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001732> ; 
+                sh:node [sh:property [sh:path qudt:unit ;
+                                        sh:hasValue unit:PER-CentiM]]] ;
+sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001732> ; 
+sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002440> ; 
+                sh:node [sh:property [sh:path qudt:unit ;
+                                        sh:hasValue unit:Percent]]] ;
+sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002441> ;
+                sh:node [sh:property [sh:path qudt:unit ;
+                                        sh:hasValue unit:Percent]]] ; 
+sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0000186> ; 
+sh:property [sh:path <http://qudt.org/schema/qudt#Unit> ; 
+sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0000952> ; 
+sh:property [sh:path <http://purl.allotrope.org/ontologies/role#AFRL_0000155> ; 
+sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002663> ; 
+.
+
+<http://purl.allotrope.org/ontologies/process#AFP_0002680> a sh:NodeShape, rdfs:Class ;
+    skos:prefLabel "Assay" ;
+    skos:altLabel "Analysis", "Measurement Method" ;
+    skos:definition "A planned process with the objective to produce information about the material entity that is the evaluant, by physically examining it or its proxies. [OBI]" ;
+    sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001164> ; ] ;
+.
+
+cat:FTparameter a sh:NodeShape, rdfs:Class ;
+    skos:prefLabel "Fourier Transform Parameter" ;
+    skos:definition "It refers to the settings and specifications used for the Fourier Transform (FT) process in infrared spectroscopy. These parameters control how the raw interferogram data, collected in the time domain, is converted into a frequency (wavenumber) spectrum." ;
+
+http://purl.allotrope.org/ontologies/result#AFR_0002410
+http://purl.allotrope.org/ontologies/result#AFR_0002998
+http://purl.allotrope.org/ontologies/result#AFR_0002999
+http://purl.allotrope.org/ontologies/result#AFR_0001199
+http://purl.allotrope.org/ontologies/result#AFR_0002412
+http://purl.allotrope.org/ontologies/result#AFR_0002411
