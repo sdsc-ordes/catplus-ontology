@@ -1152,10 +1152,80 @@ sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002663> ;
 cat:FTparameter a sh:NodeShape, rdfs:Class ;
     skos:prefLabel "Fourier Transform Parameter" ;
     skos:definition "It refers to the settings and specifications used for the Fourier Transform (FT) process in infrared spectroscopy. These parameters control how the raw interferogram data, collected in the time domain, is converted into a frequency (wavenumber) spectrum." ;
+    sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002410> ;
+            sh:xone (
+                        [ sh:hasValue "BX" ]
+                        [ sh:hasValue "TR" ]
+                        [ sh:hasValue "4P" ]
+                        [ sh:hasValue "HG" ]
+                        [ sh:hasValue "B3" ]
+                        [ sh:hasValue "B4" ]
+                        [ sh:hasValue "NBW" ]
+                        [ sh:hasValue "NBM" ]
+                        [ sh:hasValue "NBS" ]
+                        [ sh:hasValue "US1" ]
+                        [ sh:hasValue "US2" ]
+                    )
+            ] ;
+    sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002998> ;
+                sh:node [sh:property [sh:path qudt:unit ;
+                                            sh:hasValue unit:PER-CentiM]]] ;
+    sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002999> ;
+                sh:node [sh:property [sh:path qudt:unit ;
+                                            sh:hasValue unit:PER-CentiM]]] ;
+    sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001199> ;] ;
+    sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002412> ;
+                sh:xone (
+                    [ sh:hasValue "ML" ]
+                    [ sh:hasValue "SM" ]
+                    [ sh:hasValue "PW" ]
+                    [ sh:hasValue "MLP" ]
+                    [ sh:hasValue "SMP" ]
+                    [ sh:hasValue "PWP" ]
+                    [ sh:hasValue "MS" ]
+                    [ sh:hasValue "NO" ]
+                )
+            ] ;
+    sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002411> ;
+                sh:xone (
+                    [ sh:hasValue "1" ]
+                    [ sh:hasValue "2" ]
+                    [ sh:hasValue "4" ]
+                    [ sh:hasValue "8" ]
+                    [ sh:hasValue "16" ]
+                    [ sh:hasValue "32" ]
+                    [ sh:hasValue "64" ]
+                    [ sh:hasValue "128" ]
+                    [ sh:hasValue "256" ]
+                    [ sh:hasValue "512" ]
+                )
+            ] .
 
-http://purl.allotrope.org/ontologies/result#AFR_0002410
-http://purl.allotrope.org/ontologies/result#AFR_0002998
-http://purl.allotrope.org/ontologies/result#AFR_0002999
-http://purl.allotrope.org/ontologies/result#AFR_0001199
-http://purl.allotrope.org/ontologies/result#AFR_0002412
-http://purl.allotrope.org/ontologies/result#AFR_0002411
+<http://purl.allotrope.org/ontologies/result#AFR_0002045> a sh:NodeShape, rdfs:Class ;
+
+sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001074> ; 
+                sh:node [sh:property [sh:path qudt:unit ;
+                                            sh:hasValue unit:PER-CentiM]]] ;
+sh:property [ sh:path <http://purl.allotrope.org/ontologies/quality#AFQ_0000201> ; ] ;
+sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0003051> ; ] ;
+sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0003051> ; ] ;
+sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0000951> ; ] ;
+sh:property [ sh:path <http://purl.allotrope.org/ontologies/quality#AFQ_0000062> ; ] ;
+sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002568> ; ] ;
+sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001595> ; 
+                sh:node [sh:property [sh:path qudt:unit ;
+                                        sh:hasValue unit:PER-CentiM]]] ;
+sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0000948> ; ] ;
+sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001074> ; ] ;
+sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0000948> ; ] ;
+sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001074> ; 
+                sh:node [sh:property [sh:path qudt:unit ;
+                                        sh:hasValue unit:PER-CentiM]]] ;
+sh:property [ sh:path <http://purl.allotrope.org/ontologies/equipment#AFE_0000145> ; ] ;
+sh:property [ sh:path cat:lowFoldingLimit ;                 
+                sh:node [sh:property [sh:path qudt:unit ;
+                                        sh:hasValue unit:PER-CentiM]]] ;
+sh:property [ sh:path cat:highFoldingLimit ; 
+                sh:node [sh:property [sh:path qudt:unit ;
+                                        sh:hasValue unit:PER-CentiM]]] ;
+.
