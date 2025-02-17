@@ -553,6 +553,7 @@ allo-res:AFR_0002534 a rdf:Property ;
     skos:definition "A detection type is a classification datum that classifies the type of detection performed by the detector. [Allotrope]" ;
     .
 
+
 allo-res:AFR_0001116 a rdf:Property ;
     skos:prefLabel "analyst" ;
     skos:definition "Analyst is measurement metadata about the name or identifier of a person that has the role of an analyst in the measurement. [Allotrope]" ;
@@ -611,6 +612,13 @@ allo-res:AFR_0002536 a rdf:Property ;
     skos:prefLabel "injection time" ;
     skos:definition "An injection time is a time that indicates when an injection is performed. [Allotrope]" ;
     .
+
+cat:type a rdf:Property ;
+    skos:prefLabel "type" ;
+    skos:definition "A type refers to the classification of a process or approach based on its purpose, which can be: Optimization: The process of refining or improving a system, model, or reaction to achieve the best possible performance, efficiency, or yield. Discovery: The process of identifying new compounds, reactions, or principles, often through exploration, experimentation, or computational methods." ;
+    .
+
+
 
 
 ###################################################################################################
@@ -812,8 +820,12 @@ cat:Campaign a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path schema:description ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:genericObjective ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:campaignClass ; sh:datatype xsd:string ;
-                         sh:xone ([ sh:hasValue "optimization"]
-                                  [ sh:hasValue "discovery"]) ; ] ;
+                         sh:xone ([ sh:hasValue "Open Research"]
+                                  [ sh:hasValue "Standard Research"]
+                                  [ sh:hasValue "High level of Confidentiality"]) ; ] ;
+    sh:property [sh:path cat:type ; sh:datatype xsd:string ;
+                         sh:xone ([ sh:hasValue "discovery"]
+                                  [ sh:hasValue "optimization"]) ; ] ;
     sh:property [sh:path allo-res:AFR_0002764 ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:hasBatch ; sh:class cat:Batch] ;
     sh:property [sh:path cat:hasObjective ; sh:class obo:IAO_0000005] ;
