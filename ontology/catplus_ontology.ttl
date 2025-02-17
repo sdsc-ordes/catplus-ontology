@@ -518,7 +518,6 @@ allo-res:AFR_0000948 a rdf:Property ;
     skos:definition "The distance between the peak maximum and the peak base, measured in a direction parallel to the axis representing the detector response resp. the measured quantity. [IUPAC Orange Book]" ;
     .
 
-
 allo-res:AFR_0001606 a rdf:Property ;
     skos:prefLabel "method name" ;
     skos:definition "A method name is a name that denotes a plan specification (method). [Allotrope]"
@@ -850,7 +849,7 @@ cat:Well a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path qudt:quantity ;
                  sh:node cat:Observation ] ;
         sh:xone ([sh:property [sh:path cat:hasSample ; sh:class cat:Sample ]]  #hasSample
-                 [sh:property [sh:path cat:peak ; sh:class allo-res:AFR_0000413 ]] ); #peak list
+                 [sh:property [sh:path cat:peak ; sh:class allo-res:AFR_0000413 ]] ); #peak
 
     .   
 
