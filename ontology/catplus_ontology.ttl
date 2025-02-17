@@ -518,6 +518,7 @@ allo-res:AFR_0000948 a rdf:Property ;
     skos:definition "The distance between the peak maximum and the peak base, measured in a direction parallel to the axis representing the detector response resp. the measured quantity. [IUPAC Orange Book]" ;
     .
 
+<<<<<<< HEAD
 allo-res:AFR_0001606 a rdf:Property ;
     skos:prefLabel "method name" ;
     skos:definition "A method name is a name that denotes a plan specification (method). [Allotrope]"
@@ -613,12 +614,17 @@ allo-res:AFR_0002536 a rdf:Property ;
     skos:definition "An injection time is a time that indicates when an injection is performed. [Allotrope]" ;
     .
 
+=======
+>>>>>>> 98129e0 (Hotfix hci (#33))
 cat:type a rdf:Property ;
     skos:prefLabel "type" ;
     skos:definition "A type refers to the classification of a process or approach based on its purpose, which can be: Optimization: The process of refining or improving a system, model, or reaction to achieve the best possible performance, efficiency, or yield. Discovery: The process of identifying new compounds, reactions, or principles, often through exploration, experimentation, or computational methods." ;
     .
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 98129e0 (Hotfix hci (#33))
 
 
 ###################################################################################################
