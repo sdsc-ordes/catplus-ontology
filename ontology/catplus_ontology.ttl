@@ -516,6 +516,104 @@ allo-dchdf:Index a rdf:Property;
 allo-res:AFR_0000948 a rdf:Property ;
     skos:prefLabel "Peak Height" ;
     skos:definition "The distance between the peak maximum and the peak base, measured in a direction parallel to the axis representing the detector response resp. the measured quantity. [IUPAC Orange Book]" ;
+<<<<<<< HEAD
+=======
+    .
+
+allo-res:AFR_0001606 a rdf:Property ;
+    skos:prefLabel "method name" ;
+    skos:definition "A method name is a name that denotes a plan specification (method). [Allotrope]"
+    .
+
+cat:hasPlate a rdf:Property ;
+    skos:prefLabel "has Plate" ;
+    skos:definition "The plate that is part of the batch" ;
+    .
+
+allo-dc:componentDataType a rdf:Property ;
+    skos:prefLabel "component data type" ;
+    skos:definition "The data type of the component" ;
+    .
+
+rdfs:label a rdf:Property ;
+    skos:prefLabel "label" ;
+    skos:definition "A label is a textual or numeric identifier that is used to identify or describe an object, entity, or concept." ;
+    .
+
+allo-res:AFR_0001121 a rdf:Property ;
+    skos:prefLabel "measurement ID" ;
+    skos:definition "Measurement id is measurement metadata that identifies the measuring run. [Allotrope]" ;
+    .
+
+allo-res:AFR_0002722 a rdf:Property ;
+    skos:prefLabel "has Device control aggregate document" ;
+    skos:definition "A property which aggregates device control documents. [Allotrope]" ;
+    .
+
+allo-res:AFR_0002534 a rdf:Property ;
+    skos:prefLabel "detection type" ;
+    skos:definition "A detection type is a classification datum that classifies the type of detection performed by the detector. [Allotrope]" ;
+    .
+
+
+allo-res:AFR_0001116 a rdf:Property ;
+    skos:prefLabel "analyst" ;
+    skos:definition "Analyst is measurement metadata about the name or identifier of a person that has the role of an analyst in the measurement. [Allotrope]" ;
+    .
+
+allo-res:AFR_0002374 a rdf:Property ;
+    skos:prefLabel "has Measurement aggregate document" ;
+    skos:definition "A property which aggregates measurement documents." ;
+    .
+
+purl:identifier a rdf:Property ;
+    skos:prefLabel "identifier" ;
+    skos:definition "an identifier of a sample" ;
+    .
+
+cat:hasWell a rdf:Property ;
+    skos:prefLabel "has Well" ;
+    skos:definition "A property to indicate the well something has" ;
+    .
+
+qudt:value a rdf:Property ;
+    skos:prefLabel "value" ;
+    skos:definition "The value of a quantity" ;
+    .
+
+cat:hasSample a rdf:Property ;
+    skos:prefLabel "has Sample" ;
+    skos:definition "A property to indicate the sample something has" ;
+    .
+
+cat:peak a rdf:Property ;
+    skos:prefLabel "peak" ;
+    skos:definition "A peak is a local maximum in the chromatogram that represents the presence of a specific compound or analyte." ;
+    .
+allo-res:AFR_0001118 a rdf:Property ;
+    skos:prefLabel "sample Identifier" ;
+    skos:definition "Sample id is a measurement metadata that identifies a sample being measured. [Allotrope]" ;
+    .
+
+obo:IAO_0000590 a rdf:Property ;
+    skos:prefLabel "written name" ;
+    skos:definition "A textual entity that denotes a particular in reality. [IAO]" ;
+    .
+
+allo-res:AFR_0001267 a rdf:Property ;
+    skos:prefLabel "autosampler injection volume setting" ;
+    skos:definition "An autosampler parameter specification that specifies the volume of sample the autosampler is to inject into the mobile phase for separation. [Allotrope]" ;
+    .
+
+allo-res:AFR_0002535 a rdf:Property ;
+    skos:prefLabel "injection identifier" ;
+    skos:definition "An injection identifier is an identifier that identifies some injection. [Allotrope]" ;
+    .
+
+allo-res:AFR_0002536 a rdf:Property ;
+    skos:prefLabel "injection time" ;
+    skos:definition "An injection time is a time that indicates when an injection is performed. [Allotrope]" ;
+>>>>>>> 67e6442 (Agilent fixes (#32))
     .
 
 <<<<<<< HEAD
@@ -625,6 +723,7 @@ cat:type a rdf:Property ;
 
 =======
 >>>>>>> 98129e0 (Hotfix hci (#33))
+
 
 
 ###################################################################################################
