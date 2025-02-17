@@ -230,11 +230,6 @@ cat:hasChemical a rdf:Property ;
     skos:definition "The chemical that is part of the sample" ;
     .
 
-cat:hasContainerPositionAndQuantity a rdf:Property ;
-    skos:prefLabel "has Container Position and Quantity" ;
-    skos:definition "indicates the relationship between a action and it's description of the container posititions and quantities" ;
-    .
-
 allo-proc:AFP_0002677 a rdf:Property ;
     skos:prefLabel "pressure measurement" ;
     skos:definition "A measurement that targets the pressure of some material entity. [Allotrope]" ;
@@ -533,7 +528,6 @@ cat:AddAction a rdfs:Class, sh:NodeShape ;
    rdfs:subClassOf allo-real:AFRE_0000001 ;
    sh:property [sh:path cat:dispenseType ; sh:datatype xsd:string] ;
    sh:property [sh:path cat:hasSample ; sh:class cat:Sample] ;
-   sh:property [sh:path cat:hasContainerPositionAndQuantity ; sh:class cat:ContainerPositionAndQuantity] ;
    sh:property [sh:path allo-qual:AFQ_0000111 ;
                 sh:xone ([ sh:hasValue "Solid"]
                         [sh:hasValue "Liquid"]) ; ] ; #state of matter / dispense state
@@ -640,20 +634,6 @@ cat:Cartridge a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path cat:cartridgeComposition ; sh:datatype xsd:string ] ; #cartridgeComposition
     .
 
-# cat:ContainerPositionAndQuantity a rdfs:Class, sh:NodeShape ;
-#     skos:prefLabel "Container, Position and Quantity" ;
-#     rdfs:comment    """A class that represents the containers, positions and quantities of a sample.
-#                     It must have a value for the well location identifier property, and a property called 'quantity' that has 3 representations of the same quantity with different units and values. 
-#                     The units are MilliL and MilliGM.""" ;
-#     skos:definition "Refers to specific aspects related to the handling and organization of samples or materials" ;
-#     sh:property [
-#         sh:path allo-res:AFR_0002240 ;                 #Well location identifier, also known as "position"
-#         sh:datatype xsd:string
-#     ] ;
-#     sh:property [sh:path qudt:quantity ;
-#                 sh:node cat:Observation ]
-#     .
-
 cat:QuantityShape a sh:NodeShape ;
     sh:targetObjectsOf qudt:quantity ;
     sh:property [
@@ -683,7 +663,6 @@ cat:Sample a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Sample" ;
     skos:altLabel  "chemical mixture" ;
     skos:definition "A portion of chemical mixture is a chemical substance that is composed of chemical substances. [Allotrope]" ;
-    sh:property [sh:path cat:containerID ; sh:datatype xsd:string] ;
     sh:property [sh:path allo-res:AFR_0002464 ; sh:datatype xsd:string] ; #VialID
     sh:property cat:vialShape ; #vial type
     sh:property [sh:path cat:role ] ;   #role
@@ -693,8 +672,6 @@ cat:Sample a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path allo-qual:AFQ_0000111 ;
                 sh:xone ([ sh:hasValue "Solid"]
                         [sh:hasValue "Liquid"]) ; ] ;  #dispense state
-    sh:property [sh:path cat:internalBarCode ; sh:datatype xsd:string] ; #internal barcode
-    sh:property [sh:path cat:containerBarcode ; sh:datatype xsd:string] ; #container barcode
     sh:property [sh:path allo-res:AFR_0002036 ; #concentration
                     sh:node cat:Observation ;
                     sh:node [sh:property    [sh:path qudt:unit ;
@@ -705,6 +682,7 @@ cat:Sample a rdfs:Class, sh:NodeShape ;
                                             sh:hasValue unit:PERCENT] ]];
     sh:property [sh:path cat:hasSample ; sh:class cat:Sample] ; #hasSample
     sh:property [sh:path cat:hasChemical ; sh:class obo:CHEBI_25367 ] ; #hasChemical
+    sh:property [sh:path allo-res:AFR_0000432 ; sh:class cat:PeakList ] ; #peak list
     .
 
 obo:CHEBI_25367 a rdfs:Class, sh:NodeShape ;
@@ -777,6 +755,8 @@ cat:Well a rdfs:Class, sh:NodeShape ;
     skos:definition "A well is a small container used to hold samples or reagents in an experiment." ; 
     sh:property [sh:path allo-res:AFR_0002240 ; sh:datatype xsd:string] ; #Well location identifier
     sh:property [sh:path cat:hasSample ; sh:class cat:Sample] ; #hasSample
+    sh:property [sh:path qudt:quantity ;
+                 sh:node cat:Observation ]
     .   
 
 allo-res:AFR_0002525 a rdfs:Class, sh:NodeShape ;
