@@ -720,9 +720,16 @@ cat:type a rdf:Property ;
     .
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 98129e0 (Hotfix hci (#33))
+=======
+cat:reactionName a rdf:Property ;
+    skos:prefLabel "reaction name" ;
+    skos:definition "the specific name given to a well-known chemical reaction, often named after its discoverer(s) or key feature, to describe a particular transformation of reactants into products" ;
+    .
+>>>>>>> 0393733 (feat:add reaction name (#34))
 
 
 
@@ -948,6 +955,7 @@ cat:Batch a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path cat:optimizationType ; sh:datatype xsd:string] ;
     sh:property [sh:path cat:hasChemical ; sh:class obo:CHEBI_25367] ;
     sh:property [sh:path cat:hasPlate ; sh:class cat:Plate] ;
+    sh:property [sh:path cat:reactionName ; sh:datatype xsd:string] ;
     .
 
 cat:Plate a rdfs:Class, sh:NodeShape ;
