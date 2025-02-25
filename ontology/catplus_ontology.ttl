@@ -511,8 +511,6 @@ allo-dchdf:Index a rdf:Property;
 allo-res:AFR_0000948 a rdf:Property ;
     skos:prefLabel "Peak Height" ;
     skos:definition "The distance between the peak maximum and the peak base, measured in a direction parallel to the axis representing the detector response resp. the measured quantity. [IUPAC Orange Book]" ;
-<<<<<<< HEAD
-=======
     .
 
 allo-res:AFR_0001606 a rdf:Property ;
@@ -608,124 +606,261 @@ allo-res:AFR_0002535 a rdf:Property ;
 allo-res:AFR_0002536 a rdf:Property ;
     skos:prefLabel "injection time" ;
     skos:definition "An injection time is a time that indicates when an injection is performed. [Allotrope]" ;
->>>>>>> 67e6442 (Agilent fixes (#32))
     .
 
-<<<<<<< HEAD
-allo-res:AFR_0001606 a rdf:Property ;
-    skos:prefLabel "method name" ;
-    skos:definition "A method name is a name that denotes a plan specification (method). [Allotrope]"
-    .
-
-cat:hasPlate a rdf:Property ;
-    skos:prefLabel "has Plate" ;
-    skos:definition "The plate that is part of the batch" ;
-    .
-
-allo-dc:componentDataType a rdf:Property ;
-    skos:prefLabel "component data type" ;
-    skos:definition "The data type of the component" ;
-    .
-
-rdfs:label a rdf:Property ;
-    skos:prefLabel "label" ;
-    skos:definition "A label is a textual or numeric identifier that is used to identify or describe an object, entity, or concept." ;
-    .
-
-allo-res:AFR_0001121 a rdf:Property ;
-    skos:prefLabel "measurement ID" ;
-    skos:definition "Measurement id is measurement metadata that identifies the measuring run. [Allotrope]" ;
-    .
-
-allo-res:AFR_0002722 a rdf:Property ;
-    skos:prefLabel "has Device control aggregate document" ;
-    skos:definition "A property which aggregates device control documents. [Allotrope]" ;
-    .
-
-allo-res:AFR_0002534 a rdf:Property ;
-    skos:prefLabel "detection type" ;
-    skos:definition "A detection type is a classification datum that classifies the type of detection performed by the detector. [Allotrope]" ;
-    .
-
-
-allo-res:AFR_0001116 a rdf:Property ;
-    skos:prefLabel "analyst" ;
-    skos:definition "Analyst is measurement metadata about the name or identifier of a person that has the role of an analyst in the measurement. [Allotrope]" ;
-    .
-
-allo-res:AFR_0002374 a rdf:Property ;
-    skos:prefLabel "has Measurement aggregate document" ;
-    skos:definition "A property which aggregates measurement documents." ;
-    .
-
-purl:identifier a rdf:Property ;
-    skos:prefLabel "identifier" ;
-    skos:definition "an identifier of a sample" ;
-    .
-
-cat:hasWell a rdf:Property ;
-    skos:prefLabel "has Well" ;
-    skos:definition "A property to indicate the well something has" ;
-    .
-
-qudt:value a rdf:Property ;
-    skos:prefLabel "value" ;
-    skos:definition "The value of a quantity" ;
-    .
-
-cat:hasSample a rdf:Property ;
-    skos:prefLabel "has Sample" ;
-    skos:definition "A property to indicate the sample something has" ;
-    .
-
-cat:peak a rdf:Property ;
-    skos:prefLabel "peak" ;
-    skos:definition "A peak is a local maximum in the chromatogram that represents the presence of a specific compound or analyte." ;
-    .
-allo-res:AFR_0001118 a rdf:Property ;
-    skos:prefLabel "sample Identifier" ;
-    skos:definition "Sample id is a measurement metadata that identifies a sample being measured. [Allotrope]" ;
-    .
-
-obo:IAO_0000590 a rdf:Property ;
-    skos:prefLabel "written name" ;
-    skos:definition "A textual entity that denotes a particular in reality. [IAO]" ;
-    .
-
-allo-res:AFR_0001267 a rdf:Property ;
-    skos:prefLabel "autosampler injection volume setting" ;
-    skos:definition "An autosampler parameter specification that specifies the volume of sample the autosampler is to inject into the mobile phase for separation. [Allotrope]" ;
-    .
-
-allo-res:AFR_0002535 a rdf:Property ;
-    skos:prefLabel "injection identifier" ;
-    skos:definition "An injection identifier is an identifier that identifies some injection. [Allotrope]" ;
-    .
-
-allo-res:AFR_0002536 a rdf:Property ;
-    skos:prefLabel "injection time" ;
-    skos:definition "An injection time is a time that indicates when an injection is performed. [Allotrope]" ;
-    .
-
-=======
->>>>>>> 98129e0 (Hotfix hci (#33))
 cat:type a rdf:Property ;
     skos:prefLabel "type" ;
     skos:definition "A type refers to the classification of a process or approach based on its purpose, which can be: Optimization: The process of refining or improving a system, model, or reaction to achieve the best possible performance, efficiency, or yield. Discovery: The process of identifying new compounds, reactions, or principles, often through exploration, experimentation, or computational methods." ;
     .
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 98129e0 (Hotfix hci (#33))
-=======
 cat:reactionName a rdf:Property ;
     skos:prefLabel "reaction name" ;
     skos:definition "the specific name given to a well-known chemical reaction, often named after its discoverer(s) or key feature, to describe a particular transformation of reactants into products" ;
     .
->>>>>>> 0393733 (feat:add reaction name (#34))
 
+allo-res:AFR_0002045 a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+cat:correlationMode a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+allo-res:AFR_0002612 a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+cat:stabilizationDelay a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+allo-res:AFR_0002998 a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+allo-res:AFR_0002999 a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+cat:backgroundScans a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+allo-res:AFR_0003051 a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+allo-res:AFR_0000251 a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+allo-res:AFR_0001619 a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+cat:signalGainBackground a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+cat:signalGainSample a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+cat:unitSampleScanningMode a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+cat:unitBackgroundScanningMode a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+allo-res:AFR_0001074 a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+allo-qual:AFQ_0000201 a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+cat:backgroundScanTime a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+cat:sampleScanTime a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+allo-res:AFR_0000951 a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+allo-qual:AFQ_0000062 a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+allo-res:AFR_0001595 a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+cat:backwardPeakPosition a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+cat:backwardPeakHeight a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+<http://purl.allotrope.org/ontologies/equipment#AFE_0000145> a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+cat:lowFoldingLimit a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+cat:highFoldingLimit a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+allo-hdf:scaleFactor a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+dct:date a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+cat:frequencyFirstPoint a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+cat:frequencyLastPoint a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+allo-res:AFR_0002440 a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+allo-res:AFR_0002441 a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+cat:numberDataPoint a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+allo-res:AFR_0000952 a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+allo-role:AFRL_0000155 a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+allo-res:AFR_0002663 a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+allo-res:AFR_0000186 a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+allo-res:AFR_0001732 a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+allo-res:AFR_0000622 a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+allo-res:AFR_0002410 a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+allo-res:AFR_0001199 a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+allo-res:AFR_0002412 a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+allo-res:AFR_0002411 a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+<http://purl.allotrope.org/ontologies/equipment#AFE_0000354> a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+allo-res:AFR_0002389 a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+allo-res:AFR_0002254 a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+allo-res:AFR_0001247 a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+cat:opticalFilterSetting a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+allo-res:AFR_0002315 a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+allo-res:AFR_0002251 a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+cat:minimaResearch a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+cat:peakNumber a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+allo-prop:AFX_0000059 a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+cat:upperLimitScanRange a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+cat:lowerLimitScanRange a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+cat:peakSpectroscopy a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+allo-res:AFR_0002538 a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+allo-res:AFR_0001588 a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+allo-res:AFR_0001266 a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+allo-res:AFR_0001692 a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
+
+allo-res:AFR_0001694 a rdf:Property;
+  skos:prefLabel "preflabel";
+  skos:definition "definition" .
 
 
 ###################################################################################################
@@ -1352,43 +1487,75 @@ cat:xUnits a sh:PropertyShape ;
 
 <http://purl.allotrope.org/ontologies/process#AFP_0003095> a sh:NodeShape, rdfs:Class ;
     skos:prefLabel "Acquisition Parameters" ;
-    <http://purl.allotrope.org/ontologies/result#AFR_0002045>
+    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002045> ;
+                sh:xone ([ sh:hasValue "SN" ] 
+            [sh:hasValue "DN" ] 
+            [sh:hasValue "SF" ] 
+            [sh:hasValue "SD" ] 
+            [sh:hasValue "DD" ] 
+            [sh:hasValue "DF" ]) ] ;
+    sh:property [ sh:path cat:correlationMode ;
+                sh:xone ([ sh:hasValue "NO" ]
+                        [ sh:hasValue "LO" ]
+                        [ sh:hasValue "HI"]
+                        [ sh:hasValue "FUL" ]);] ;
+    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002612> ;
+                sh:node [sh:property [sh:path qudt:unit ;
+                        sh:hasValue unit:SEC] ;]
+                        ] ;
+    
+    sh:property [ sh:path cat:stabilizationDelay ;
+                sh:node [sh:property [sh:path qudt:unit ;
+                        sh:hasValue unit:SEC] ;]
+                        ] ;
 
-<http://purl.allotrope.org/ontologies/result#AFR_0002612>
-<http://purl.allotrope.org/ontologies/result#AFR_0001625>
-<http://purl.allotrope.org/ontologies/result#AFR_0002998>
-<http://purl.allotrope.org/ontologies/result#AFR_0002999>
-<http://purl.allotrope.org/ontologies/process#AFP_0002666>
-<http://purl.allotrope.org/ontologies/result#AFR_0003051>
-<http://purl.allotrope.org/ontologies/result#AFR_0000251>
-<http://purl.allotrope.org/ontologies/result#AFR_0001619>
-<http://purl.allotrope.org/ontologies/quality#AFQ_0000201>
-<http://purl.allotrope.org/ontologies/quality#AFQ_0000201>
-<http://qudt.org/schema/qudt#Unit>
-<http://qudt.org/schema/qudt#Unit>
-cat:correlationMode
+    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002998> ;
+                sh:node [sh:property [sh:path qudt:unit ;
+                            sh:hasValue unit:PER-CentiM] ;]
+                            ] ;
+    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002999> ;
+                sh:node [sh:property [sh:path qudt:unit ;
+                            sh:hasValue unit:PER-CentiM] ;]
+                            ] ;
+    sh:property [ sh:path cat:backgroundScans ] ;
+    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0003051> ];
+    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0000251> ];
+    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001619> ;
+                sh:node [sh:property [sh:path qudt:unit ;
+                            sh:hasValue unit:PER-CentiM] ;]
+                            ] ;
+    sh:property [ sh:path cat:signalGainBackground ;
+                 sh:minInclusive -1 ;
+                 sh:maxInclusive 7 ;] ;
+    sh:property [ sh:path cat:signalGainSample ;
+                sh:minInclusive -1 ;
+                sh:maxInclusive 7 ;] ;
+    sh:property [ sh:path cat:unitSampleScanningMode ; sh:datatype xsd:boolean ] ;
+    sh:property [ sh:path cat:unitBackgroundScanningMode ; sh:datatype xsd:boolean ] ;
 .
 
 <http://purl.allotrope.org/ontologies/role#AFRL_0000028> a sh:NodeShape, rdfs:Class ;
     skos:prefLabel "Setting datum" ;
     skos:definition "Setting datum is the contextual role of an information object that specifies some device or process setting. [Allotrope]" ;
-sh:property [sh:path <http://purl.allotrope.org/ontologies/hdf5/1.8#scaleFactor> ; 
-sh:property [sh:path <http://purl.org/dc/terms/date> ; 
-sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001732> ; 
+sh:property [sh:path <http://purl.allotrope.org/ontologies/hdf5/1.8#scaleFactor> ; ] ; 
+sh:property [sh:path <http://purl.org/dc/terms/date> ; ] ;
+sh:property [sh:path cat:frequencyFirstPoint ; 
                 sh:node [sh:property [sh:path qudt:unit ;
                                         sh:hasValue unit:PER-CentiM]]] ;
-sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001732> ; 
+sh:property [sh:path cat:frequencyLastPoint ; 
+                sh:node [sh:property [sh:path qudt:unit ;
+                                        sh:hasValue unit:PER-CentiM]]] ;
 sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002440> ; 
                 sh:node [sh:property [sh:path qudt:unit ;
                                         sh:hasValue unit:Percent]]] ;
 sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002441> ;
                 sh:node [sh:property [sh:path qudt:unit ;
                                         sh:hasValue unit:Percent]]] ; 
-sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0000186> ; 
-sh:property [sh:path <http://qudt.org/schema/qudt#Unit> ; 
-sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0000952> ; 
-sh:property [sh:path <http://purl.allotrope.org/ontologies/role#AFRL_0000155> ; 
-sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002663> ; 
+sh:property [sh:path cat:numberDataPoint ; ] ;
+sh:property cat:xUnits ;
+sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0000952> ; ] ;
+sh:property [sh:path <http://purl.allotrope.org/ontologies/role#AFRL_0000155> ; ] ;
+sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002663> ; ] ;
 .
 
 <http://purl.allotrope.org/ontologies/process#AFP_0002680> a sh:NodeShape, rdfs:Class ;
@@ -1451,30 +1618,111 @@ cat:FTparameter a sh:NodeShape, rdfs:Class ;
             ] .
 
 <http://purl.allotrope.org/ontologies/result#AFR_0002045> a sh:NodeShape, rdfs:Class ;
+    skos:prefLabel "device acquisition method_Rf" ;
+    skos:definition "A device acquistion method is a machine readable plan specification that specifies how the acquisition software of an instrument is to execute the instrument's portion of an analysis. [Allotrope]" ;
+    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001074> ; 
+                    sh:node [sh:property [sh:path qudt:unit ;
+                                                sh:hasValue unit:PER-CentiM]]] ;
+    sh:property [ sh:path <http://purl.allotrope.org/ontologies/quality#AFQ_0000201> ; ] ;
+    sh:property [ sh:path cat:backgroundScanTime ; ] ;
+    sh:property [ sh:path cat:sampleScanTime ; ] ;
+    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0000951> ; ] ;
+    sh:property [ sh:path <http://purl.allotrope.org/ontologies/quality#AFQ_0000062> ; ] ;
+    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002568> ; ] ;
+    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001595> ; 
+                    sh:node [sh:property [sh:path qudt:unit ;
+                                            sh:hasValue unit:PER-CentiM]]] ;
+    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0000948> ; ] ;
+    sh:property [ sh:path cat:backwardPeakPosition ; ] ;
+    sh:property [ sh:path cat:backwardPeakHeight; ] ;
+    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001074> ; 
+                    sh:node [sh:property [sh:path qudt:unit ;
+                                            sh:hasValue unit:PER-CentiM]]] ;
+    sh:property [ sh:path <http://purl.allotrope.org/ontologies/equipment#AFE_0000145> ; ] ;
+    sh:property [ sh:path cat:lowFoldingLimit ;                 
+                    sh:node [sh:property [sh:path qudt:unit ;
+                                            sh:hasValue unit:PER-CentiM]]] ;
+    sh:property [ sh:path cat:highFoldingLimit ; 
+                    sh:node [sh:property [sh:path qudt:unit ;
+                                            sh:hasValue unit:PER-CentiM]]] ;
+.
 
-sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001074> ; 
+cat:opticParameter_Rf a sh:NodeShape, rdfs:Class ;
+    skos:prefLabel "Optical Parameter" ;
+    skos:definition "It refers to the settings that define the configuration and operation of the optical components in the spectrometer. These parameters helps optimize spectral quality based on the sample characteristics and measurement goals." ;
+    sh:property [ sh:path <http://purl.allotrope.org/ontologies/equipment#AFE_0000354> ; 
+
+            ] ;
+    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002389> ; 
+                sh:node [sh:property [sh:path qudt:unit ;
+                                        sh:hasValue unit:Millimeter]]] ;
+    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002254> ; 
+
+            ] ;
+    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001247> ; 
+
+            ] ;
+    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001595> ; 
+
+            ] ;
+    sh:property [ sh:path cat:opticalFilterSetting ; 
+                sh:xone (
+                    [ sh:hasValue "open" ]
+                    [ sh:hasValue "close" ]
+                )
+            ] ;
+    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002315> ; 
+
+            ] ;
+    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002251> ; 
+
+            ] .
+
+
+cat:PeakList_TR a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Peak List TR" ;
+    skos:definition "A collection of peaks" ;
+    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001606> ; 
+                ] ;
+    sh:property [ sh:path cat:minimaResearch ; 
+                ] ;
+    sh:property [ sh:path cat:peakNumber ; 
+                ] ;
+    sh:property [ sh:path <http://purl.allotrope.org/ontologies/property#AFX_0000059> ; 
+                    sh:node [sh:property [sh:path qudt:unit ;
+                                            sh:hasValue unit:PERCENT]]] ;
+    sh:property [ sh:path cat:upperLimitScanRange ; 
                 sh:node [sh:property [sh:path qudt:unit ;
                                             sh:hasValue unit:PER-CentiM]]] ;
-sh:property [ sh:path <http://purl.allotrope.org/ontologies/quality#AFQ_0000201> ; ] ;
-sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0003051> ; ] ;
-sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0003051> ; ] ;
-sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0000951> ; ] ;
-sh:property [ sh:path <http://purl.allotrope.org/ontologies/quality#AFQ_0000062> ; ] ;
-sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002568> ; ] ;
-sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001595> ; 
+    sh:property [ sh:path cat:lowerLimitScanRange ; 
                 sh:node [sh:property [sh:path qudt:unit ;
-                                        sh:hasValue unit:PER-CentiM]]] ;
-sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0000948> ; ] ;
-sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001074> ; ] ;
-sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0000948> ; ] ;
-sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001074> ; 
+                                            sh:hasValue unit:PER-CentiM]]] ;
+    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0000948> ; 
                 sh:node [sh:property [sh:path qudt:unit ;
-                                        sh:hasValue unit:PER-CentiM]]] ;
-sh:property [ sh:path <http://purl.allotrope.org/ontologies/equipment#AFE_0000145> ; ] ;
-sh:property [ sh:path cat:lowFoldingLimit ;                 
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:xone ([ sh:hasValue unit:PERCENT ] 
+                    [sh:hasValue <http://purl.allotrope.org/ontology/qudt-ext/unit#Unitless>] )]]] ;
+
+    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0000949> ; 
                 sh:node [sh:property [sh:path qudt:unit ;
-                                        sh:hasValue unit:PER-CentiM]]] ;
-sh:property [ sh:path cat:highFoldingLimit ; 
+                                            sh:hasValue unit:PERCENT]]] ;
+    sh:property [ sh:path cat:peakSpectroscopy ; 
                 sh:node [sh:property [sh:path qudt:unit ;
-                                        sh:hasValue unit:PER-CentiM]]] ;
-.
+                                            sh:hasValue unit:PER-CentiM]]] ;
+    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002538> ; 
+    sh:node [sh:property [sh:path qudt:unit ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:xone ([ sh:hasValue unit:PERCENT ] 
+                    [sh:hasValue <http://purl.allotrope.org/ontology/qudt-ext/unit#Unitless>] )]]] ;
+    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001588> ; 
+                sh:node [sh:property [sh:path qudt:unit ;
+                                            sh:hasValue unit:PERCENT]]] ;
+    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001266> ; 
+                sh:node [sh:property [sh:path qudt:unit ;
+                                            sh:hasValue unit:PER-CentiM]]] ;
+    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001692> ; 
+                ] ;
+    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001694> ; 
+                ] .
