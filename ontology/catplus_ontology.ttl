@@ -619,52 +619,52 @@ cat:reactionName a rdf:Property ;
     .
 
 allo-res:AFR_0002045 a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "device acquisition method";
+  skos:definition "A device acquistion method is a machine readable plan specification that specifies how the acquisition software of an instrument is to execute the instrument's portion of an analysis. [Allotrope]" .
 
 cat:correlationMode a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "correlation mode";
+  skos:definition "It is a setting that adjusts the data acquisition process to enhance spectral accuracy and stability." .
 
 allo-res:AFR_0002612 a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "measurement start setting";
+  skos:definition "A measurement start delay setting is a control setting that specifies a delay before starting a measurement process. [Allotrope]" .
 
 cat:stabilizationDelay a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "stabilization delay";
+  skos:definition "It is the time set aside for the instrument and sample environment to reach stable operating conditions before data collection begins. " .
 
 allo-res:AFR_0002998 a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "maximum frequency setting";
+  skos:definition "A maximum frequency setting is a setting that specifies the upper limit of some frequency. [Allotrope]" .
 
 allo-res:AFR_0002999 a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "minimum frequency setting";
+  skos:definition "A minimum frequency setting is a setting that specifies the lower limit of some frequency. [Allotrope]" .
 
 cat:backgroundScans a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "background scans";
+  skos:definition "It refers to the number of scans collected from a refersence sample area prior to measuring the actual sample. These scans establish a baseline spectrum that accounts for ambient IR signals, instrumental noise, and environmental factors." .
 
 allo-res:AFR_0003051 a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "number of scans setting";
+  skos:definition "A number of scans setting is a setting that specifies the number of scans scans that are taken as part of or aggregated into a single measurement. [Allotrope]" .
 
 allo-res:AFR_0000251 a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "infrared spectrum";
+  skos:definition "A plot of absorbance or transmittance vs. wavelength/wavenumber/frequency obtained by measuring the absorption or transmission of infrared radiation by a sample. [CHMO]" .
 
 allo-res:AFR_0001619 a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "resolution";
+  skos:definition "Resolution is a description of the smallest change in a quality being measured by a sensor (measurement instrument, detector) that causes a perceptible change in the corresponding indication. [Allotrope]" .
 
 cat:signalGainBackground a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "signal gain background";
+  skos:definition "It refers to the amplification level applied to the background signal during data acquisition. Adjusting the signal gain enhances the sensitivity of the background measurement, helping to capture weaker signals and reduce noise." .
 
 cat:signalGainSample a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "signal gain sample";
+  skos:definition "It refers to the amplification applied to the sample signal during data acquisition. Increasing signal gain for the sample enhances its spectral intensity, making it easier to detect weak absorbance features and improve the signal-to-noise ratio." .
 
 cat:unitSampleScanningMode a rdf:Property;
   skos:prefLabel "preflabel";
@@ -675,192 +675,188 @@ cat:unitBackgroundScanningMode a rdf:Property;
   skos:definition "definition" .
 
 allo-res:AFR_0001074 a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "peak position";
+  skos:definition "A peak facet that denotes the abscissa value of the extrema (maxima or minima) attributed to the peak in a data description function. The extrema is often determined through a mathematical fitting of measurement signals to eliminate spurious extrema due to noise. [Allotrope]" .
 
 allo-qual:AFQ_0000201 a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "signal gain configuration";
+  skos:definition "This parameter is related to the calibration and sensitivty of the infrared instrument during data acquisition" .
 
 cat:backgroundScanTime a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "background scan time";
+  skos:definition "It is the duration allocated for collecting the background signal before measuring the sample." .
 
 cat:sampleScanTime a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "sample scan time";
+  skos:definition "It refers to the duration spent measuring the sample's spectrum during data acquisition. " .
 
 allo-res:AFR_0000951 a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "duration";
+  skos:definition "A measure of the magnitude of the time region in which the process occurs. [Allotrope]" .
 
 allo-qual:AFQ_0000062 a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "focal length";
+  skos:definition "A physical quality that inheres in a bearer by virtue of how strongly the bearer converges or diverges light. [Wikipedia]" .
 
 allo-res:AFR_0001595 a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "excitation laser power setting";
+  skos:definition "The excitation laser power setting is the power of the laser beam used for exciting the sample. [Allotrope]" .
 
 cat:backwardPeakPosition a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "backward peak position";
+  skos:definition "It refers to the specific wavenumber at which a peak in the spectrum is located, meausred from the baseline to the point of maximum intensity" .
 
 cat:backwardPeakHeight a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "backward peak height";
+  skos:definition "It is related to the intensity of a spectral peak, focusing on how it behaves in relation to the baseline of the spectrum" .
 
 <http://purl.allotrope.org/ontologies/equipment#AFE_0000145> a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "channel";
+  skos:definition "A communication channel or channel, refers either to a physical transmission medium such as a wire, or to a logical connection over a multiplexed medium such as a radio channel. A channel is used to convey an information signal, for example a digital bit stream, from one or several senders (or transmitters) to one or several receivers. [Wikipedia]" .
 
 cat:lowFoldingLimit a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "low folding limit";
+  skos:definition "It refers to the lower threshold in the Fourier Transform process, below which frequency components may be aliased or folded into the measurable range. " .
 
 cat:highFoldingLimit a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "high folding limit";
+  skos:definition "It refers to the upper threshold in the Fourier Transform process beyond which higher frequency components are 'folded' or aliased back into the measured range. " .
 
 allo-hdf:scaleFactor a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "scale factor";
+  skos:definition "A scale factor is a numerical value that is used to multiply or divide another value, typically to adjust the magnitude or units of a measurement." .
 
 dct:date a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "date";
+  skos:definition "A point or period of time associated with an event in the lifecycle of the resource." .
 
 cat:frequencyFirstPoint a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "frquency first point";
+  skos:definition "In an IR spectrum, it is the starting frequency or wavenumber at which the measurement begins  (i.e. lowest frequency or highest wavenumber)." .
 
 cat:frequencyLastPoint a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "frequency last point";
+  skos:definition "In an IR spectrum, it is the ending frequency or wavenumber at which the measurement concludes (i.e. highest frequency or lowest wavenumber)." .
 
 allo-res:AFR_0002440 a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "minimum value";
+  skos:definition "A minimum value is a descriptive statistic that denotes the smallest value present in some dataset. [Allotrope]" .
 
 allo-res:AFR_0002441 a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "maximum value";
+  skos:definition "A maximum value is a descriptive statistic that denotes the largest value present in some dataset. [Allotrope]" .
 
 cat:numberDataPoint a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "number data point";
+  skos:definition "It refers to the total number of individual measurements or data samples collected across the defined frequency range during the spectrum acquisition. " .
 
 allo-res:AFR_0000952 a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "measurement time";
+  skos:definition "The date/time of the measurement. [Allotrope]" .
 
 allo-role:AFRL_0000155 a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "derived measure";
+  skos:definition "A derived measure is a measure that is the outcome of some indirect measurement. The derived value is derived from base measures by calculations following a formula or algorithm. [Allotrope]" .
 
 allo-res:AFR_0002663 a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "smoothing window setting";
+  skos:definition "A smoothing window setting is a control setting that specifies the smoothing window for foam detection. [Allotrope]" .
 
 allo-res:AFR_0000186 a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "data point";
+  skos:definition "A data point is the single measurement result of a series. [Allotrope]" .
 
 allo-res:AFR_0001732 a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
-
-allo-res:AFR_0000622 a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "frequency";
+  skos:definition "A frequency is a rate that quantifies the number of occurrences of some discrete event in a given amount of time. [Allotrope]" .
 
 allo-res:AFR_0002410 a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "apodization";
+  skos:definition "Apodization is the name of a filter method used in some data apodization. [Allotrope]" .
 
 allo-res:AFR_0001199 a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "peak resolution";
+  skos:definition "A peak facet that measures the degree of separation between the peak and another specified peak. [Allotrope]" .
 
 allo-res:AFR_0002412 a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "phase correction";
+  skos:definition "Phase correction is the name of a method for phase correction used to adjust FT spectra. [Allotrope]" .
 
 allo-res:AFR_0002411 a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "zero filling factor";
+  skos:definition "The factor of the size increase by time domain zero padding the Fourier transformation. [Allotrope]" .
 
 <http://purl.allotrope.org/ontologies/equipment#AFE_0000354> a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "device";
+  skos:definition "A device is an artifact that is designed to perform a function primarily by means of its mechanical or electrical nature. [Allotrope]" .
 
 allo-res:AFR_0002389 a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "aperture size setting";
+  skos:definition "An aperture size setting temperature setting is a control setting that specifies the size of the aperture opening. [Allotrope]" .
 
 allo-res:AFR_0002254 a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "beamsplitter type";
+  skos:definition "A beamsplitter type is a classification datum that describes the beamsplitter type based on the compound used to split the light beam. [Allotrope]" .
 
 allo-res:AFR_0001247 a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "detector setting";
+  skos:definition "A parameter specification specific to a detector. [Allotrope]" .
 
 cat:opticalFilterSetting a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "optical filter setting";
+  skos:definition "Optical filter is used in spectroscopic instruments to control the wavelengths of light that reach the detector, allowing for the isolation of specific spectral regions." .
 
 allo-res:AFR_0002315 a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "source current setting";
+  skos:definition "A source current setting is a current setting controlling the current supplied to a radiation source. [Allotrope]" .
 
 allo-res:AFR_0002251 a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "optical velocity setting";
+  skos:definition "An optical velocity setting is a setting that specifies the velocity of the moving mirror during the run. [Allotrope]" .
 
 cat:minimaResearch a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "minima research";
+  skos:definition "A 'yes' response to 'search for minima' confirms a transmittance spectrum, where absorption features appear as valleys. A 'no' response indicates an absorbance spectrum, where absorption features are represented as peaks." .
 
 cat:peakNumber a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "peak number";
+  skos:definition "Number of distinct peaks observed in a chromatogram or spectrum during an analysis." .
 
 allo-prop:AFX_0000059 a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "sensitivity";
+  skos:definition "The slope of the calibration curve. If the curve is in fact a 'curve', rather than a straight line, then of course sensitivity will be a function of analyte concentration or amount. If sensitivity is to be a unique performance characteristic, it must depend only on the chemical measurement process, not upon scale factors. [IUPAC Gold Book]" .
 
 cat:upperLimitScanRange a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "upper limit scan range";
+  skos:definition "A detector scan range setting is a detector setting that sets the wavenumber range of scans, setting the upper limit." .
 
 cat:lowerLimitScanRange a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "lower limit scan range";
+  skos:definition "A detector scan range setting is a detector setting that sets the wavenumber range of scans, setting the lower limit." .
 
 cat:peakSpectroscopy a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "peak spectroscopy";
+  skos:definition "A peak in spectroscopy corresponds to a specific wavelength, frequency, or energy absorption/emission associated with molecular vibrations, electronic transitions, or nuclear interactions. The position and intensity of these peaks provide structural information about the molecule, such as functional groups, bond types, and electronic environments." .
 
 allo-res:AFR_0002538 a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "absolute intensity";
+  skos:definition "Absolute intensity (datum) is a quantity facet that quantifies the absolute magnitude of a signal. [Allotrope]" .
 
 allo-res:AFR_0001588 a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "intensity";
+  skos:definition "Intensity (datum) is a quantity facet that quantifies the relative magnitude of a signal. [Allotrope]" .
 
 allo-res:AFR_0001266 a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "peak width at half height";
+  skos:definition "The peak width calculated at half of the peak height. [Allotrope]" .
 
 allo-res:AFR_0001692 a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "height threshold for peak integration setting (chromatography)";
+  skos:definition "A data processing setting that sets a minimum or maximum height for a peak to be included in the integrated peak list. [Allotrope]" .
 
 allo-res:AFR_0001694 a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "shoulder detection enabled setting (chromatography)";
+  skos:definition "A data processing setting that allows the integration process to interpolate a baseline for the smaller peak of overlapping peaks for the time period specified. [Allotrope]" .
 
 
 ###################################################################################################
@@ -1461,7 +1457,7 @@ cat:minimumShape a sh:PropertyShape ;
     .
 
 cat:dateShape a sh:PropertyShape ;
-    sh:path <http://purl.allotrope.org/ontologies/result#AFR_0000622> ; #TODO
+    sh:path <http://purl.org/dc/terms/date> ;
     .
 
 cat:timeShape a sh:PropertyShape ;
@@ -1682,7 +1678,7 @@ cat:opticParameter_Rf a sh:NodeShape, rdfs:Class ;
 cat:PeakList_TR a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Peak List TR" ;
     skos:definition "A collection of peaks" ;
-    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001606> ; 
+    sh:property [ sh:path allo-res:AFR_0001606 ; 
                 ] ;
     sh:property [ sh:path cat:minimaResearch ; 
                 ] ;
