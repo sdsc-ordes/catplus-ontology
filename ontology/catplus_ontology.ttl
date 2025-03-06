@@ -368,11 +368,6 @@ cat:cartridgeComposition a rdf:Property ;
     skos:definition "It refers to the materials and specific sorbents packed within the SPE cartridge." ;
     .
 
-allo-res:AFR_0002524 a rdf:Property ;
-    skos:prefLabel "liquid chromatography aggregate document" ;
-    skos:definition "A liquid chromatography aggregate document is a document that aggregates LC documents. [Allotrope]"
-    .
-
 allo-res:AFR_0002526 a rdf:Property ;
     skos:prefLabel "device system document" ;
     skos:definition "A device system document is a document that encompasses the information associated with a device system. [Allotrope]" ;
@@ -409,11 +404,6 @@ cat:measure a rdf:Property ;
 cat:dimension a rdf:Property ;
     skos:prefLabel "dimension" ;
     skos:definition "A property representing a measurable extent of a particular kind, such as length, width, height, or time, in a specified context." ;
-    .
-
-cat:deviceDocument a rdf:Property ;
-    skos:prefLabel "device document" ;
-    skos:definition "A property representing documentation or information related to a device, including specifications, manuals, or calibration details." ;
     .
 
 allo-res:AFR_0002659 a rdf:Property;
@@ -891,6 +881,7 @@ allo-res:AFR_0002525 a rdfs:Class, sh:NodeShape ;
     skos:definition "A liquid chromatography document is a document that encompasses the information associated with a liquid chromatography run. [Allotrope]" ;
     sh:property [sh:path allo-res:AFR_0001116 ; sh:datatype xsd:string] ; #analyst
     sh:property [sh:path allo-res:AFR_0002374 ; sh:class allo-res:AFR_0002375] ; #hasMeasurementAggregateDocument -> MeasurementDocument
+    sh:property [sh:path allo-res:AFR_0002526 ; sh:class cat:DeviceSystemDocument ] ; #device system document
 .
 
 allo-res:AFR_0002375 a rdfs:Class, sh:NodeShape ;
@@ -898,21 +889,17 @@ allo-res:AFR_0002375 a rdfs:Class, sh:NodeShape ;
     skos:definition "A measurement document is a document that encompasses the information associated with a measurement. [Allotrope]" ;
     sh:property [sh:path allo-res:AFR_0001121 ; sh:datatype xsd:string] ; #measurement id
     sh:property [sh:path allo-res:AFR_0002607 ; sh:class cat:ChromatographyColumnDocument ] ; #chromatographyColumnDocument -> ChromatographyColumnDocument
-    sh:property [sh:path allo-res:AFR_0002722 ; sh:class allo-res:AFR_0002723 ] ; #hasDeviceControlAggregateDocument -> DeviceControlDocument
+    sh:property [sh:path allo-res:AFR_0002722 ; sh:class allo-res:AFR_0002567] ; #deviceDocument -> DeviceDocument
     sh:property [sh:path allo-res:AFR_0002083 ; sh:class cat:SampleDocument ] ; #hasSampleDocument -> cat:SampleDocument
     sh:property [sh:path allo-res:AFR_0002529 ; sh:class cat:InjectionDocument] ; #injectionDocument -> cat:InjectionDocument
     sh:property [sh:path allo-res:AFR_0002534 ; sh:datatype xsd:string] ; #detection type
     sh:property [sh:path allo-res:AFR_0002550 ; sh:class cat:ChromatogramDataCube] ; #chromatogram data cube
     sh:property [sh:path allo-res:AFR_0002551 ; sh:class cat:ThreeDimensionalUltravioletSpectrumDataCube] ; #three-dimensional ultraviolet spectrum data cube-> ThreeDimensionalUltravioletSpectrumDataCube
     sh:property [sh:path allo-res:AFR_0002878 ; sh:class cat:ThreeDimensionalMassSpectrumDataCube] ; #three-dimensional mass spectrum data cube -> ThreeDimensionalMassSpectrumDataCube
+    sh:property [sh:path allo-res:AFR_0002659  ; sh:class cat:ProcessedDataDocument] ; #hasProcessedDataDocument -> ProcessedDataDocument
 
-    .
+.
 
-allo-res:AFR_0002723 a sh:NodeShape, rdfs:Class ;
-    rdfs:subClassOf allo-res:AFR_0002567 ;
-    skos:prefLabel "Device Control Document" ;
-    skos:definition "A device control document is a document that encompasses the information associated with a device control. [Allotrope]" ;
-    .
 
 cat:ThreeDimensionalUltravioletSpectrumDataCube a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Three-Dimensional Ultraviolet Spectrum Data Cube" ;
@@ -1024,11 +1011,7 @@ allo-res:AFR_0000413 a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path allo-res:AFR_0001179 ; sh:class cat:PeakValueAtStart] ; #peak value at start
     sh:property [sh:path allo-res:AFR_0001181 ; sh:class cat:PeakValueAtEnd] ; #peak value at end
     sh:property [sh:path allo-res:AFR_0001165 ; sh:class cat:RelativePeakArea] ; #relative peak area
-    sh:property [sh:path allo-res:AFR_0002551 ; sh:class cat:ThreeDimensionalUltravioletSpectrumDataCube] ; #three-dimensional ultraviolet spectrum data cube
-    sh:property [sh:path allo-res:AFR_0002878 ; sh:class cat:ThreeDimensionalMassSpectrumDataCube] ; #three-dimensional mass spectrum data cube
-    sh:property [sh:path allo-res:AFR_0002526 ; sh:class cat:DeviceSystemDocument ] ; #device system document
-    sh:property [sh:path allo-res:AFR_0001976 ; sh:datatype xsd:string] ; #asset management identifier 
-    .
+.
 
 cat:Agilent-Peak a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Agilent Peak" ;
@@ -1047,7 +1030,7 @@ cat:DeviceSystemDocument a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Device System Document" ;
     skos:definition "A document describing a system of devices, including identifiers and associated metadata for asset management." ;
     sh:property [sh:path allo-res:AFR_0001976 ; sh:datatype xsd:string] ; #asset management identifier
-    sh:property [sh:path cat:deviceDocument ; sh:class allo-res:AFR_0002567] ; #device document
+    sh:property [sh:path allo-res:AFR_0002722 ; sh:class allo-res:AFR_0002567] ; #device document
     .
     
 allo-res:AFR_0002567 a rdfs:Class, sh:NodeShape ;
@@ -1060,6 +1043,7 @@ allo-res:AFR_0002567 a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path obo:IAO_0000017 ; sh:datatype xsd:string] ; #model number
     sh:property [sh:path allo-res:AFR_0001259; sh:datatype xsd:string] ; #firmware version
     sh:property [sh:path <http://purl.allotrope.org/ontologies/datacube-hdf-map#Index> ; sh:datatype xsd:integer] ; #index
+    sh:property [sh:path allo-res:AFR_0002534 ; sh:datatype xsd:string] ; #detection type
     .
 
 cat:Measurement a sh:NodeShape ;
