@@ -858,6 +858,9 @@ allo-res:AFR_0001694 a rdf:Property;
   skos:prefLabel "shoulder detection enabled setting (chromatography)";
   skos:definition "A data processing setting that allows the integration process to interpolate a baseline for the smaller peak of overlapping peaks for the time period specified. [Allotrope]" .
 
+cat:xUnits a rdf:Property ;
+  skos:prefLabl "x units" ;
+  skos:definition "It refers to the units used for the x-axis in the spectrum. In IR spectroscopy, it typically represent the frequency or wavenumber." .
 
 ###################################################################################################
 # Shapes
@@ -1221,12 +1224,6 @@ cat:ProcessedDataDocument a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path allo-res:AFR_0000432 ; sh:class cat:PeakList ] ; #peak list
     .
 
-cat:PeakList a rdfs:Class, sh:NodeShape ;
-    skos:prefLabel "Peak List" ;
-    skos:definition "A collection of peaks identified in chromatograms or spectra, typically used for further analysis in experiments." ;
-    sh:property [sh:path cat:peak ; sh:class allo-res:AFR_0000413] ; #peak
-    .
-
 allo-res:AFR_0000413 a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Peak" ;
     skos:definition "A peak describes a part of a spectrum/chromatogram/plot at a definite range of the experimental parameter (independent variable) of the spectrum. This definition includes a single data point of the spectrum. [Allotrope]" ;
@@ -1425,7 +1422,7 @@ cat:dataParameterShape a sh:NodeShape ;
     sh:property cat:minimumShape ;
     sh:property cat:dateShape ;
     sh:property cat:timeShape ;
-    sh:property cat:xUnits ;
+    sh:property cat:xUnitsShape ;
 .
     
 
@@ -1465,8 +1462,8 @@ cat:timeShape a sh:PropertyShape ;
     sh:datatype xsd:dateTime ;
     .
 
-cat:xUnits a sh:PropertyShape ;
-    sh:path qudt:unit ;
+cat:xUnitsShape a sh:PropertyShape ;
+    sh:path cat:xUnits ;
     sh:xone ([ sh:hasValue "WN" ] 
             [sh:hasValue "MI" ] 
             [sh:hasValue "NM" ] 
@@ -1548,7 +1545,7 @@ sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002441> ;
                 sh:node [sh:property [sh:path qudt:unit ;
                                         sh:hasValue unit:Percent]]] ; 
 sh:property [sh:path cat:numberDataPoint ; ] ;
-sh:property cat:xUnits ;
+sh:property cat:xUnitsShape ;
 sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0000952> ; ] ;
 sh:property [sh:path <http://purl.allotrope.org/ontologies/role#AFRL_0000155> ; ] ;
 sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002663> ; ] ;
@@ -1675,9 +1672,9 @@ cat:opticParameter_Rf a sh:NodeShape, rdfs:Class ;
             ] .
 
 
-cat:PeakList_TR a rdfs:Class, sh:NodeShape ;
-    skos:prefLabel "Peak List TR" ;
-    skos:definition "A collection of peaks" ;
+cat:PeakList a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Peak List" ;
+    skos:definition "A peak list is a collection of peaks identified in a spectrum or chromatogram, typically used for further analysis in experiments." ;
     sh:property [ sh:path allo-res:AFR_0001606 ; 
                 ] ;
     sh:property [ sh:path cat:minimaResearch ; 
