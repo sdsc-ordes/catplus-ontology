@@ -1510,7 +1510,10 @@ cat:xUnitsShape a sh:PropertyShape ;
                 sh:node [sh:property [sh:path qudt:unit ;
                             sh:hasValue unit:PER-CentiM] ;]
                             ] ;
-    sh:property [ sh:path cat:backgroundScans ] ;
+    sh:property [ sh:path cat:backgroundScans ; 
+                sh:node [sh:property [sh:path qudt:unit ;
+                            sh:hasValue unit:Count] ;]
+                            ] ;
     sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0003051> ];
     sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0000251> ];
     sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001619> ;
