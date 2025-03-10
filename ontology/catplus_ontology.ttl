@@ -715,7 +715,7 @@ cat:backwardPeakHeight a rdf:Property;
   skos:prefLabel "backward peak height";
   skos:definition "It is related to the intensity of a spectral peak, focusing on how it behaves in relation to the baseline of the spectrum" .
 
-<http://purl.allotrope.org/ontologies/equipment#AFE_0000145> a rdf:Property;
+allo-equ:AFE_0000145 a rdf:Property;
   skos:prefLabel "channel";
   skos:definition "A communication channel or channel, refers either to a physical transmission medium such as a wire, or to a logical connection over a multiplexed medium such as a radio channel. A channel is used to convey an information signal, for example a digital bit stream, from one or several senders (or transmitters) to one or several receivers. [Wikipedia]" .
 
@@ -791,7 +791,7 @@ allo-res:AFR_0002411 a rdf:Property;
   skos:prefLabel "zero filling factor";
   skos:definition "The factor of the size increase by time domain zero padding the Fourier transformation. [Allotrope]" .
 
-<http://purl.allotrope.org/ontologies/equipment#AFE_0000354> a rdf:Property;
+allo-equ:AFE_0000354 a rdf:Property;
   skos:prefLabel "device";
   skos:definition "A device is an artifact that is designed to perform a function primarily by means of its mechanical or electrical nature. [Allotrope]" .
 
@@ -1250,7 +1250,7 @@ cat:ProcessedDataDocument a rdfs:Class, sh:NodeShape ;
 allo-res:AFR_0000413 a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Peak" ;
     skos:definition "A peak describes a part of a spectrum/chromatogram/plot at a definite range of the experimental parameter (independent variable) of the spectrum. This definition includes a single data point of the spectrum. [Allotrope]" ;
-    sh:property [sh:path <http://purl.allotrope.org/ontologies/datacube-hdf-map#Index> ; sh:datatype xsd:integer] ; #index
+    sh:property [sh:path allo-dchdf:Index ; sh:datatype xsd:integer] ; #index
     sh:property [sh:path allo-res:AFR_0001073 ; sh:class cat:PeakArea] ; #peak area
     sh:property [sh:path allo-res:AFR_0001089 ; sh:class cat:RetentionTime ] ; #retentiontime
     sh:property [sh:path allo-res:AFR_0001164 ; sh:datatype xsd:string ] ; #peak identifier
@@ -1283,7 +1283,7 @@ cat:UV-IR-NMR-Peak a rdfs:Class, sh:NodeShape ;
 allo-res:AFR_0000413 a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Peak" ;
     skos:definition "A peak describes a part of a spectrum/chromatogram/plot at a definite range of the experimental parameter (independent variable) of the spectrum. This definition includes a single data point of the spectrum. [Allotrope]" ;
-    sh:property [sh:path <http://purl.allotrope.org/ontologies/datacube-hdf-map#Index> ; sh:datatype xsd:integer] ; #index
+    sh:property [sh:path allo-dchdf:Index ; sh:datatype xsd:integer] ; #index
     sh:property [sh:path allo-res:AFR_0001073 ; sh:class cat:PeakArea] ; #peak area
     sh:property [sh:path allo-res:AFR_0001089 ; sh:class cat:RetentionTime ] ; #retentiontime
     sh:property [sh:path allo-res:AFR_0001164 ; sh:datatype xsd:string ] ; #peak identifier
@@ -1329,7 +1329,7 @@ allo-res:AFR_0002567 a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path allo-res:AFR_0001119 ; sh:datatype xsd:string] ; #equipment serial number
     sh:property [sh:path obo:IAO_0000017 ; sh:datatype xsd:string] ; #model number
     sh:property [sh:path allo-res:AFR_0001259; sh:datatype xsd:string] ; #firmware version
-    sh:property [sh:path <http://purl.allotrope.org/ontologies/datacube-hdf-map#Index> ; sh:datatype xsd:integer] ; #index
+    sh:property [sh:path allo-dchdf:Index ; sh:datatype xsd:integer] ; #index
     .
 
 cat:Measurement a sh:NodeShape ;
@@ -1444,7 +1444,7 @@ cat:vialShape a sh:PropertyShape ;
 ##########################################################################################
 # IR stuff
 
-<http://purl.allotrope.org/ontologies/result#AFR_0002261> a rdfs:Class, sh:NodeShape ;
+allo-res:AFR_0002261 a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Transmittance" ;
     skos:definition "A transmittance is a quality quantification facet that quantifies the ratio of the transmitted radiant power (P_λ) to that incident on the sample (P0_λ): T = P_λ/ P0_λ. [IUPAC]" ;
     sh:node cat:dataParameterTRShape;
@@ -1463,7 +1463,7 @@ cat:singleChannelRefBlock a rdfs:Class, sh:NodeShape ;
     sh:node cat:dataParameterShape ;
     .
 
-<http://purl.allotrope.org/ontologies/result#AFR_0002008> a rdfs:Class, sh:NodeShape ;
+allo-res:AFR_0002008 a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Reference" ;
     skos:definition "A reference is an information content entity that is referred to in another information content entity for the purpose of comparison. [Allotrope]" ;
     
@@ -1483,38 +1483,38 @@ cat:dataParameterShape a sh:NodeShape ;
     
 
 cat:numberDataPointShape a sh:PropertyShape ;
-    sh:path <http://purl.allotrope.org/ontologies/result#AFR_0000186> ;
+    sh:path allo-res:AFR_0000186 ;
     sh:datatype xsd:integer ;
     .
 
 cat:frequencyFirstPointShape a sh:PropertyShape ;
-    sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001732> ;
+    sh:path allo-res:AFR_0001732 ;
     sh:datatype xsd:double ;
     .
 
 cat:frequencyLastPointShape a sh:PropertyShape ;
-    sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001732> ;
+    sh:path allo-res:AFR_0001732 ;
     sh:datatype xsd:double ;
     .
 
 cat:scaleFactorShape a sh:PropertyShape ;
-    sh:path <http://purl.allotrope.org/ontologies/hdf5/1.8#scaleFactor> ;
+    sh:path allo-hdf:scaleFactor ;
     sh:datatype xsd:double ;
     .
 cat:maximumShape a sh:PropertyShape ;
-    sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002441> ;
+    sh:path allo-res:AFR_0002441 ;
     .
 
 cat:minimumShape a sh:PropertyShape ;
-    sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002440> ;
+    sh:path allo-res:AFR_0002440 ;
     .
 
 cat:dateShape a sh:PropertyShape ;
-    sh:path <http://purl.org/dc/terms/date> ;
+    sh:path dct:date ;
     .
 
 cat:timeShape a sh:PropertyShape ;
-    sh:path <http://purl.allotrope.org/ontologies/result#AFR_0000952> ;
+    sh:path allo-res:AFR_0000952 ;
     sh:datatype xsd:dateTime ;
     .
 
@@ -1534,9 +1534,9 @@ cat:xUnitsShape a sh:PropertyShape ;
             [sh:hasValue "MUS"])#TODO make into qudt units
     .
 
-<http://purl.allotrope.org/ontologies/process#AFP_0003095> a sh:NodeShape, rdfs:Class ;
+allo-proc:AFP_0003095 a sh:NodeShape, rdfs:Class ;
     skos:prefLabel "Acquisition Parameters" ;
-    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002045> ;
+    sh:property [ sh:path allo-res:AFR_0002045 ;
                 sh:xone ([ sh:hasValue "SN" ] 
             [sh:hasValue "DN" ] 
             [sh:hasValue "SF" ] 
@@ -1548,7 +1548,7 @@ cat:xUnitsShape a sh:PropertyShape ;
                         [ sh:hasValue "LO" ]
                         [ sh:hasValue "HI"]
                         [ sh:hasValue "FUL" ]);] ;
-    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002612> ;
+    sh:property [ sh:path allo-res:AFR_0002612 ;
                 sh:node [sh:property [sh:path qudt:unit ;
                         sh:hasValue unit:SEC] ;]
                         ] ;
@@ -1558,11 +1558,11 @@ cat:xUnitsShape a sh:PropertyShape ;
                         sh:hasValue unit:SEC] ;]
                         ] ;
 
-    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002998> ;
+    sh:property [ sh:path allo-res:AFR_0002998 ;
                 sh:node [sh:property [sh:path qudt:unit ;
                             sh:hasValue unit:PER-CentiM] ;]
                             ] ;
-    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002999> ;
+    sh:property [ sh:path allo-res:AFR_0002999 ;
                 sh:node [sh:property [sh:path qudt:unit ;
                             sh:hasValue unit:PER-CentiM] ;]
                             ] ;
@@ -1570,9 +1570,9 @@ cat:xUnitsShape a sh:PropertyShape ;
                 sh:node [sh:property [sh:path qudt:unit ;
                             sh:hasValue unit:Count] ;]
                             ] ;
-    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0003051> ];
-    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0000251> ];
-    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001619> ;
+    sh:property [ sh:path allo-res:AFR_0003051 ];
+    sh:property [ sh:path allo-res:AFR_0000251 ];
+    sh:property [ sh:path allo-res:AFR_0001619 ;
                 sh:node [sh:property [sh:path qudt:unit ;
                             sh:hasValue unit:PER-CentiM] ;]
                             ] ;
@@ -1586,41 +1586,41 @@ cat:xUnitsShape a sh:PropertyShape ;
     sh:property [ sh:path cat:unitBackgroundScanningMode ; sh:datatype xsd:boolean ] ;
 .
 
-<http://purl.allotrope.org/ontologies/role#AFRL_0000028> a sh:NodeShape, rdfs:Class ;
+allo-role:AFRL_0000028 a sh:NodeShape, rdfs:Class ;
     skos:prefLabel "Setting datum" ;
     skos:definition "Setting datum is the contextual role of an information object that specifies some device or process setting. [Allotrope]" ;
-sh:property [sh:path <http://purl.allotrope.org/ontologies/hdf5/1.8#scaleFactor> ; ] ; 
-sh:property [sh:path <http://purl.org/dc/terms/date> ; ] ;
+sh:property [sh:path allo-hdf:scaleFactor ; ] ; 
+sh:property [sh:path dct:date ; ] ;
 sh:property [sh:path cat:frequencyFirstPoint ; 
                 sh:node [sh:property [sh:path qudt:unit ;
                                         sh:hasValue unit:PER-CentiM]]] ;
 sh:property [sh:path cat:frequencyLastPoint ; 
                 sh:node [sh:property [sh:path qudt:unit ;
                                         sh:hasValue unit:PER-CentiM]]] ;
-sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002440> ; 
+sh:property [sh:path allo-res:AFR_0002440 ; 
                 sh:node [sh:property [sh:path qudt:unit ;
                                         sh:hasValue unit:Percent]]] ;
-sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002441> ;
+sh:property [sh:path allo-res:AFR_0002441 ;
                 sh:node [sh:property [sh:path qudt:unit ;
                                         sh:hasValue unit:Percent]]] ; 
 sh:property [sh:path cat:numberDataPoint ; ] ;
 sh:property cat:xUnitsShape ;
-sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0000952> ; ] ;
-sh:property [sh:path <http://purl.allotrope.org/ontologies/role#AFRL_0000155> ; ] ;
-sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002663> ; ] ;
+sh:property [sh:path allo-res:AFR_0000952 ; ] ;
+sh:property [sh:path allo-role:AFRL_0000155 ; ] ;
+sh:property [sh:path allo-res:AFR_0002663 ; ] ;
 .
 
-<http://purl.allotrope.org/ontologies/process#AFP_0002680> a sh:NodeShape, rdfs:Class ;
+allo-proc:AFP_0002680 a sh:NodeShape, rdfs:Class ;
     skos:prefLabel "Assay" ;
     skos:altLabel "Analysis", "Measurement Method" ;
     skos:definition "A planned process with the objective to produce information about the material entity that is the evaluant, by physically examining it or its proxies. [OBI]" ;
-    sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001164> ; ] ;
+    sh:property [sh:path allo-res:AFR_0001164 ; ] ;
 .
 
 cat:FTparameter a sh:NodeShape, rdfs:Class ;
     skos:prefLabel "Fourier Transform Parameter" ;
     skos:definition "It refers to the settings and specifications used for the Fourier Transform (FT) process in infrared spectroscopy. These parameters control how the raw interferogram data, collected in the time domain, is converted into a frequency (wavenumber) spectrum." ;
-    sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002410> ;
+    sh:property [sh:path allo-res:AFR_0002410 ;
             sh:xone (
                         [ sh:hasValue "BX" ]
                         [ sh:hasValue "TR" ]
@@ -1635,14 +1635,14 @@ cat:FTparameter a sh:NodeShape, rdfs:Class ;
                         [ sh:hasValue "US2" ]
                     )
             ] ;
-    sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002998> ;
+    sh:property [sh:path allo-res:AFR_0002998 ;
                 sh:node [sh:property [sh:path qudt:unit ;
                                             sh:hasValue unit:PER-CentiM]]] ;
-    sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002999> ;
+    sh:property [sh:path allo-res:AFR_0002999 ;
                 sh:node [sh:property [sh:path qudt:unit ;
                                             sh:hasValue unit:PER-CentiM]]] ;
-    sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001199> ;] ;
-    sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002412> ;
+    sh:property [sh:path allo-res:AFR_0001199 ;] ;
+    sh:property [sh:path allo-res:AFR_0002412 ;
                 sh:xone (
                     [ sh:hasValue "ML" ]
                     [ sh:hasValue "SM" ]
@@ -1654,7 +1654,7 @@ cat:FTparameter a sh:NodeShape, rdfs:Class ;
                     [ sh:hasValue "NO" ]
                 )
             ] ;
-    sh:property [sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002411> ;
+    sh:property [sh:path allo-res:AFR_0002411 ;
                 sh:xone (
                     [ sh:hasValue "1" ]
                     [ sh:hasValue "2" ]
@@ -1669,28 +1669,28 @@ cat:FTparameter a sh:NodeShape, rdfs:Class ;
                 )
             ] .
 
-<http://purl.allotrope.org/ontologies/result#AFR_0002045> a sh:NodeShape, rdfs:Class ;
+allo-res:AFR_0002045 a sh:NodeShape, rdfs:Class ;
     skos:prefLabel "device acquisition method_Rf" ;
     skos:definition "A device acquistion method is a machine readable plan specification that specifies how the acquisition software of an instrument is to execute the instrument's portion of an analysis. [Allotrope]" ;
-    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001074> ; 
+    sh:property [ sh:path allo-res:AFR_0001074 ; 
                     sh:node [sh:property [sh:path qudt:unit ;
                                                 sh:hasValue unit:PER-CentiM]]] ;
-    sh:property [ sh:path <http://purl.allotrope.org/ontologies/quality#AFQ_0000201> ; ] ;
+    sh:property [ sh:path allo-qual:AFQ_0000201 ; ] ;
     sh:property [ sh:path cat:backgroundScanTime ; ] ;
     sh:property [ sh:path cat:sampleScanTime ; ] ;
-    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0000951> ; ] ;
-    sh:property [ sh:path <http://purl.allotrope.org/ontologies/quality#AFQ_0000062> ; ] ;
-    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002568> ; ] ;
-    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001595> ; 
+    sh:property [ sh:path allo-res:AFR_0000951 ; ] ;
+    sh:property [ sh:path allo-qual:AFQ_0000062 ; ] ;
+    sh:property [ sh:path allo-res:AFR_0002568 ; ] ;
+    sh:property [ sh:path allo-res:AFR_0001595 ; 
                     sh:node [sh:property [sh:path qudt:unit ;
                                             sh:hasValue unit:PER-CentiM]]] ;
-    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0000948> ; ] ;
+    sh:property [ sh:path allo-res:AFR_0000948 ; ] ;
     sh:property [ sh:path cat:backwardPeakPosition ; ] ;
     sh:property [ sh:path cat:backwardPeakHeight; ] ;
-    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001074> ; 
+    sh:property [ sh:path allo-res:AFR_0001074 ; 
                     sh:node [sh:property [sh:path qudt:unit ;
                                             sh:hasValue unit:PER-CentiM]]] ;
-    sh:property [ sh:path <http://purl.allotrope.org/ontologies/equipment#AFE_0000145> ; ] ;
+    sh:property [ sh:path allo-equ:AFE_0000145 ; ] ;
     sh:property [ sh:path cat:lowFoldingLimit ;                 
                     sh:node [sh:property [sh:path qudt:unit ;
                                             sh:hasValue unit:PER-CentiM]]] ;
@@ -1702,19 +1702,19 @@ cat:FTparameter a sh:NodeShape, rdfs:Class ;
 cat:opticParameter_Rf a sh:NodeShape, rdfs:Class ;
     skos:prefLabel "Optical Parameter" ;
     skos:definition "It refers to the settings that define the configuration and operation of the optical components in the spectrometer. These parameters helps optimize spectral quality based on the sample characteristics and measurement goals." ;
-    sh:property [ sh:path <http://purl.allotrope.org/ontologies/equipment#AFE_0000354> ; 
+    sh:property [ sh:path allo-equ:AFE_0000354 ; 
 
             ] ;
-    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002389> ; 
+    sh:property [ sh:path allo-res:AFR_0002389 ; 
                 sh:node [sh:property [sh:path qudt:unit ;
                                         sh:hasValue unit:Millimeter]]] ;
-    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002254> ; 
+    sh:property [ sh:path allo-res:AFR_0002254 ; 
 
             ] ;
-    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001247> ; 
+    sh:property [ sh:path allo-res:AFR_0001247 ; 
 
             ] ;
-    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001595> ; 
+    sh:property [ sh:path allo-res:AFR_0001595 ; 
 
             ] ;
     sh:property [ sh:path cat:opticalFilterSetting ; 
@@ -1723,10 +1723,10 @@ cat:opticParameter_Rf a sh:NodeShape, rdfs:Class ;
                     [ sh:hasValue "close" ]
                 )
             ] ;
-    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002315> ; 
+    sh:property [ sh:path allo-res:AFR_0002315 ; 
 
             ] ;
-    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002251> ; 
+    sh:property [ sh:path allo-res:AFR_0002251 ; 
 
             ] .
 
@@ -1740,7 +1740,7 @@ cat:PeakList a rdfs:Class, sh:NodeShape ;
                 ] ;
     sh:property [ sh:path cat:peakNumber ; 
                 ] ;
-    sh:property [ sh:path <http://purl.allotrope.org/ontologies/property#AFX_0000059> ; 
+    sh:property [ sh:path allo-prop:AFX_0000059 ; 
                     sh:node [sh:property [sh:path qudt:unit ;
                                             sh:hasValue unit:PERCENT]]] ;
     sh:property [ sh:path cat:upperLimitScanRange ; 
@@ -1749,32 +1749,32 @@ cat:PeakList a rdfs:Class, sh:NodeShape ;
     sh:property [ sh:path cat:lowerLimitScanRange ; 
                 sh:node [sh:property [sh:path qudt:unit ;
                                             sh:hasValue unit:PER-CentiM]]] ;
-    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0000948> ; 
+    sh:property [ sh:path allo-res:AFR_0000948 ; 
                 sh:node [sh:property [sh:path qudt:unit ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
                 sh:xone ([ sh:hasValue unit:PERCENT ] 
-                    [sh:hasValue <http://purl.allotrope.org/ontology/qudt-ext/unit#Unitless>] )]]] ;
+                    [sh:hasValue unit:UNITLESS] )]]] ;
 
-    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0000949> ; 
+    sh:property [ sh:path allo-res:AFR_0000949 ; 
                 sh:node [sh:property [sh:path qudt:unit ;
                                             sh:hasValue unit:PERCENT]]] ;
     sh:property [ sh:path cat:peakSpectroscopy ; 
                 sh:node [sh:property [sh:path qudt:unit ;
                                             sh:hasValue unit:PER-CentiM]]] ;
-    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0002538> ; 
+    sh:property [ sh:path allo-res:AFR_0002538 ; 
     sh:node [sh:property [sh:path qudt:unit ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
                 sh:xone ([ sh:hasValue unit:PERCENT ] 
-                    [sh:hasValue <http://purl.allotrope.org/ontology/qudt-ext/unit#Unitless>] )]]] ;
-    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001588> ; 
+                    [sh:hasValue unit:UNITLESS] )]]] ;
+    sh:property [ sh:path allo-res:AFR_0001588 ; 
                 sh:node [sh:property [sh:path qudt:unit ;
                                             sh:hasValue unit:PERCENT]]] ;
-    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001266> ; 
+    sh:property [ sh:path allo-res:AFR_0001266 ; 
                 sh:node [sh:property [sh:path qudt:unit ;
                                             sh:hasValue unit:PER-CentiM]]] ;
-    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001692> ; 
+    sh:property [ sh:path allo-res:AFR_0001692 ; 
                 ] ;
-    sh:property [ sh:path <http://purl.allotrope.org/ontologies/result#AFR_0001694> ; 
+    sh:property [ sh:path allo-res:AFR_0001694 ; 
                 ] .
