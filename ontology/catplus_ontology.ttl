@@ -736,7 +736,7 @@ dct:date a rdf:Property;
   skos:definition "A point or period of time associated with an event in the lifecycle of the resource." .
 
 cat:frequencyFirstPoint a rdf:Property;
-  skos:prefLabel "frquency first point";
+  skos:prefLabel "frequency first point";
   skos:definition "In an IR spectrum, it is the starting frequency or wavenumber at which the measurement begins  (i.e. lowest frequency or highest wavenumber)." .
 
 cat:frequencyLastPoint a rdf:Property;
@@ -1589,25 +1589,25 @@ allo-proc:AFP_0003095 a sh:NodeShape, rdfs:Class ;
 allo-role:AFRL_0000028 a sh:NodeShape, rdfs:Class ;
     skos:prefLabel "Setting datum" ;
     skos:definition "Setting datum is the contextual role of an information object that specifies some device or process setting. [Allotrope]" ;
-sh:property [sh:path allo-hdf:scaleFactor ; ] ; 
-sh:property [sh:path dct:date ; ] ;
-sh:property [sh:path cat:frequencyFirstPoint ; 
-                sh:node [sh:property [sh:path qudt:unit ;
-                                        sh:hasValue unit:PER-CentiM]]] ;
-sh:property [sh:path cat:frequencyLastPoint ; 
-                sh:node [sh:property [sh:path qudt:unit ;
-                                        sh:hasValue unit:PER-CentiM]]] ;
-sh:property [sh:path allo-res:AFR_0002440 ; 
-                sh:node [sh:property [sh:path qudt:unit ;
-                                        sh:hasValue unit:Percent]]] ;
-sh:property [sh:path allo-res:AFR_0002441 ;
-                sh:node [sh:property [sh:path qudt:unit ;
-                                        sh:hasValue unit:Percent]]] ; 
-sh:property [sh:path cat:numberDataPoint ; ] ;
-sh:property cat:xUnitsShape ;
-sh:property [sh:path allo-res:AFR_0000952 ; ] ;
-sh:property [sh:path allo-role:AFRL_0000155 ; ] ;
-sh:property [sh:path allo-res:AFR_0002663 ; ] ;
+    sh:property [sh:path allo-hdf:scaleFactor ; ] ; 
+    sh:property [sh:path dct:date ; ] ;
+    sh:property [sh:path cat:frequencyFirstPoint ; 
+                    sh:node [sh:property [sh:path qudt:unit ;
+                                            sh:hasValue unit:PER-CentiM]]] ;
+    sh:property [sh:path cat:frequencyLastPoint ; 
+                    sh:node [sh:property [sh:path qudt:unit ;
+                                            sh:hasValue unit:PER-CentiM]]] ;
+    sh:property [sh:path allo-res:AFR_0002440 ; 
+                    sh:node [sh:property [sh:path qudt:unit ;
+                                            sh:hasValue unit:Percent]]] ;
+    sh:property [sh:path allo-res:AFR_0002441 ;
+                    sh:node [sh:property [sh:path qudt:unit ;
+                                            sh:hasValue unit:Percent]]] ; 
+    sh:property [sh:path cat:numberDataPoint ; ] ;
+    sh:property cat:xUnitsShape ;
+    sh:property [sh:path allo-res:AFR_0000952 ; ] ;
+    sh:property [sh:path allo-role:AFRL_0000155 ; ] ;
+    sh:property [sh:path allo-res:AFR_0002663 ; ] ;
 .
 
 allo-proc:AFP_0002680 a sh:NodeShape, rdfs:Class ;
