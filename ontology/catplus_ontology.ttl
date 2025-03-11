@@ -672,12 +672,12 @@ cat:signalGainSample a rdf:Property;
   skos:definition "It refers to the amplification applied to the sample signal during data acquisition. Increasing signal gain for the sample enhances its spectral intensity, making it easier to detect weak absorbance features and improve the signal-to-noise ratio." .
 
 cat:unitSampleScanningMode a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "unit sample scanning mode";
+  skos:definition "This refers to the number of scans (or the duration in minutes) taken to measure and collect data from a sample during an experiment or analysis." .
 
 cat:unitBackgroundScanningMode a rdf:Property;
-  skos:prefLabel "preflabel";
-  skos:definition "definition" .
+  skos:prefLabel "unit background scanning mode";
+  skos:definition "This refers to the number of scans (or the duration in minutes) taken to collect baseline or reference data, often without the sample, to account for any background noise or interference in the measurement." .
 
 allo-res:AFR_0001074 a rdf:Property;
   skos:prefLabel "peak position";
