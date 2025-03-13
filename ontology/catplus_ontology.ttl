@@ -1596,24 +1596,24 @@ allo-role:AFRL_0000028 a sh:NodeShape, rdfs:Class ;
     sh:property [sh:path cat:frequencyLastPoint ; 
                     sh:node [sh:property [sh:path qudt:unit ;
                                             sh:hasValue unit:PER-CentiM]]] ;
-    sh:property [sh:path allo-res:AFR_0002440 ; 
+    sh:property [sh:path allo-res:AFR_0002440 ; #minimum value
                     sh:node [sh:property [sh:path qudt:unit ;
                                             sh:hasValue unit:Percent]]] ;
-    sh:property [sh:path allo-res:AFR_0002441 ;
+    sh:property [sh:path allo-res:AFR_0002441 ; #maximum value
                     sh:node [sh:property [sh:path qudt:unit ;
                                             sh:hasValue unit:Percent]]] ; 
     sh:property [sh:path cat:numberDataPoint ; ] ;
     sh:property cat:xUnitsShape ;
-    sh:property [sh:path allo-res:AFR_0000952 ; ] ;
-    sh:property [sh:path allo-role:AFRL_0000155 ; ] ;
-    sh:property [sh:path allo-res:AFR_0002663 ; ] ;
+    sh:property [sh:path allo-res:AFR_0000952 ; ] ; #measurement time
+    sh:property [sh:path allo-role:AFRL_0000155 ; ] ; #derived measure
+    sh:property [sh:path allo-res:AFR_0002663 ; ] ; #smoothing window setting
 .
 
 allo-proc:AFP_0002680 a sh:NodeShape, rdfs:Class ;
     skos:prefLabel "Assay" ;
     skos:altLabel "Analysis", "Measurement Method" ;
     skos:definition "A planned process with the objective to produce information about the material entity that is the evaluant, by physically examining it or its proxies. [OBI]" ;
-    sh:property [sh:path allo-res:AFR_0001164 ; ] ;
+    sh:property [sh:path allo-res:AFR_0001164 ; ] ; #peak identifier
 .
 
 cat:FTparameter a sh:NodeShape, rdfs:Class ;
@@ -1668,7 +1668,7 @@ cat:FTparameter a sh:NodeShape, rdfs:Class ;
                 )
             ] .
 
-allo-res:AFR_0002045 a sh:NodeShape, rdfs:Class ;
+cat:DeviceAquisitionMethod a sh:NodeShape, rdfs:Class ;
     skos:prefLabel "device acquisition method_Rf" ;
     skos:definition "A device acquistion method is a machine readable plan specification that specifies how the acquisition software of an instrument is to execute the instrument's portion of an analysis. [Allotrope]" ;
     sh:property [ sh:path allo-res:AFR_0001074 ; 
