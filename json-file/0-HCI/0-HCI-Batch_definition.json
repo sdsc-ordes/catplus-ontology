@@ -30,7 +30,6 @@
                     "unit": "g/mol"
                 },
                 "smiles": "C[O-].[Na+]",
-                "swissCatNumber": "SwissCAT-10942334",
                 "keywords": "optional only in HCI file",
                 "Inchi": "InChI=1S/CH3O.Na/c1-2;/h1H3;/q-1;+1",
                 "molecularFormula": "CH3NaO",
@@ -42,7 +41,6 @@
             {
                 "chemicalID": "36",
                 "chemicalName": "theobromine",
-                "CASNumber": "83-67-0",
                 "molecularMass": {
                     "value": 180.160,
                     "unit": "g/mol"
@@ -66,7 +64,6 @@
                     "unit": "g/mol"
                 },
                 "smiles": "CI",
-                "swissCatNumber": "SwissCAT-6328",
                 "keywords": "optional only in HCI file",
                 "Inchi": "InChI=1S/CH3I/c1-2/h1H3",
                 "molecularFormula": "CH3I",
@@ -78,7 +75,6 @@
             {
                 "chemicalID": "79",
                 "chemicalName": "methanol",
-                "CASNumber": "67-56-1",
                 "molecularMass": {
                     "value": 32.042,
                     "unit": "g/mol"
