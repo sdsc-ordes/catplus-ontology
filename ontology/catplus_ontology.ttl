@@ -283,7 +283,7 @@ cat:hasBatch a rdf:Property ;
 allo-res:AFR_0002764 a rdf:Property ;
     skos:prefLabel "reference" ;
     skos:definition "Some link to a publication or paper, we want a less generic name to describe any note/reference" ;
-    . 
+    .
 
 cat:campaignClass a rdf:Property ;
     skos:prefLabel "campaign class" ;
@@ -298,6 +298,11 @@ allo-com:AFC_0000090 a rdf:Property ;
 cat:criteria a rdf:Property ;
     skos:prefLabel "criteria" ;
     skos:definition "A criteria is a standard or rule by which the success of the experiment is judged." ;
+    .
+
+cat:productIdentification a rdf:Property ;
+    skos:prefLabel "product identification" ;
+    skos:definition "Identification of a Product that may consist of a sample and optionally a peak." ;
     .
 
 cat:swissCatNumber a rdf:Property ;
@@ -716,7 +721,6 @@ allo-real:AFRE_0000001 a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path cat:hasPlate ; sh:class cat:Plate] ; #hasPlate
     sh:property [sh:path cat:hasWell ; sh:class cat:Well] ; #hasWell
     sh:property [sh:path allo-res:AFR_0001723 ; sh:datatype xsd:string ] ;#Equipment name ,
-    sh:property [sh:path cat:subAction ; sh:datatype xsd:string ] ;# Subaction name ,
     sh:property [sh:path cat:subEquipmentName ; sh:datatype xsd:string ] ;#subEquipmentName
     sh:property [sh:path schema:name ; sh:datatype xsd:string ] ; #name
     sh:property [sh:path allo-prop:AFX_0000622 ; sh:datatype xsd:dateTime ] ;#startTime ,
@@ -724,7 +728,9 @@ allo-real:AFRE_0000001 a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path allo-res:AFR_0001606 ; sh:datatype xsd:string ] ;#methodName
     sh:property [sh:path cat:hasBatch ; sh:class cat:Batch] ; #hasBatch
     sh:property [sh:path cat:order ; sh:datatype xsd:string ] #order
+    sh:property [sh:path cat:productIdentification ; sh:class cat:ProductIdentification] ; #productIdentification
     .
+
 
 cat:Solvent a rdfs:Class, sh:NodeShape ;
     skos:prefLabel "Solvent" ;
@@ -734,12 +740,6 @@ cat:Solvent a rdfs:Class, sh:NodeShape ;
                  sh:node [sh:property    [sh:path qudt:unit ;
                                          sh:hasValue unit:MilliL] ]]
 
-
-cat:SubAction a rdfs:Class, sh:NodeShape ;
-    skos:prefLabel "Sub Action" ;
-    skos:definition "A sub action is a smaller, constituent action that is part of a larger action." ;
-    sh:property [sh:path schema:name ; sh:datatype xsd:string] ; #subActionName
-    .
 
 cat:SeparationSubAction a rdfs:Class, sh:NodeShape ;
     rdfs:subClassOf cat:SubAction ;
@@ -775,7 +775,7 @@ cat:Observation a rdfs:Class, sh:NodeShape ;
     skos:definition "An observation is an abstract entity that captures the unit and value of a property into one node." ;
     sh:property [sh:path qudt:unit  ; sh:minCount 1 ; sh:maxCount 1] ;
     sh:property [sh:path qudt:value ; sh:minCount 1 ; sh:maxCount 1] ;
-    sh:property [sh:path cat:errorMargin ; 
+    sh:property [sh:path cat:errorMargin ;
                 sh:node [sh:property [sh:path qudt:unit ; sh:minCount 1 ], [sh:path qudt:value ; sh:minCount 1 ]]] ;
     .
 
@@ -788,6 +788,15 @@ cat:Product a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path cat:hasChemical ; sh:class obo:CHEBI_25367 ] ; #hasChemical
     sh:property [sh:path allo-res:AFR_0000432 ; sh:class cat:PeakList ] ; #peak list
     .
+
+
+cat:ProductIdentification
+    skos:prefLabel "Product Identification" ;
+    skos:definition "Identification of a chemical mixture where the chemical substances are unknown" ;
+   sh:property [sh:path purl:identifier ; sh:datatype xsd:string] ; #identifier/sampleID
+   sh:property [sh:path allo-res:AFR_0001164 ; sh:datatype xsd:string ] ; #peak identifier
+   .
+
 
 cat:Sample a rdfs:Class, sh:NodeShape ;
     skos:related allo-mat:AFM_0001099 ;
