@@ -628,6 +628,250 @@ cat:reactionName a rdf:Property ;
     skos:definition "the specific name given to a well-known chemical reaction, often named after its discoverer(s) or key feature, to describe a particular transformation of reactants into products" ;
     .
 
+allo-res:AFR_0002045 a rdf:Property;
+  skos:prefLabel "device acquisition method";
+  skos:definition "A device acquistion method is a machine readable plan specification that specifies how the acquisition software of an instrument is to execute the instrument's portion of an analysis. [Allotrope]" .
+
+cat:correlationMode a rdf:Property;
+  skos:prefLabel "correlation mode";
+  skos:definition "It is a setting that adjusts the data acquisition process to enhance spectral accuracy and stability." .
+
+allo-res:AFR_0002612 a rdf:Property;
+  skos:prefLabel "measurement start setting";
+  skos:definition "A measurement start delay setting is a control setting that specifies a delay before starting a measurement process. [Allotrope]" .
+
+cat:stabilizationDelay a rdf:Property;
+  skos:prefLabel "stabilization delay";
+  skos:definition "It is the time set aside for the instrument and sample environment to reach stable operating conditions before data collection begins. " .
+
+allo-res:AFR_0002998 a rdf:Property;
+  skos:prefLabel "maximum frequency setting";
+  skos:definition "A maximum frequency setting is a setting that specifies the upper limit of some frequency. [Allotrope]" .
+
+allo-res:AFR_0002999 a rdf:Property;
+  skos:prefLabel "minimum frequency setting";
+  skos:definition "A minimum frequency setting is a setting that specifies the lower limit of some frequency. [Allotrope]" .
+
+cat:backgroundScans a rdf:Property;
+  skos:prefLabel "background scans";
+  skos:definition "It refers to the number of scans collected from a refersence sample area prior to measuring the actual sample. These scans establish a baseline spectrum that accounts for ambient IR signals, instrumental noise, and environmental factors." .
+
+allo-res:AFR_0003051 a rdf:Property;
+  skos:prefLabel "number of scans setting";
+  skos:definition "A number of scans setting is a setting that specifies the number of scans scans that are taken as part of or aggregated into a single measurement. [Allotrope]" .
+
+allo-res:AFR_0000251 a rdf:Property;
+  skos:prefLabel "infrared spectrum";
+  skos:definition "A plot of absorbance or transmittance vs. wavelength/wavenumber/frequency obtained by measuring the absorption or transmission of infrared radiation by a sample. [CHMO]" .
+
+allo-res:AFR_0001619 a rdf:Property;
+  skos:prefLabel "resolution";
+  skos:definition "Resolution is a description of the smallest change in a quality being measured by a sensor (measurement instrument, detector) that causes a perceptible change in the corresponding indication. [Allotrope]" .
+
+cat:signalGainBackground a rdf:Property;
+  skos:prefLabel "signal gain background";
+  skos:definition "It refers to the amplification level applied to the background signal during data acquisition. Adjusting the signal gain enhances the sensitivity of the background measurement, helping to capture weaker signals and reduce noise." .
+
+cat:signalGainSample a rdf:Property;
+  skos:prefLabel "signal gain sample";
+  skos:definition "It refers to the amplification applied to the sample signal during data acquisition. Increasing signal gain for the sample enhances its spectral intensity, making it easier to detect weak absorbance features and improve the signal-to-noise ratio." .
+
+cat:unitSampleScanningMode a rdf:Property;
+  skos:prefLabel "unit sample scanning mode";
+  skos:definition "This refers to the number of scans (or the duration in minutes) taken to measure and collect data from a sample during an experiment or analysis." .
+
+cat:unitBackgroundScanningMode a rdf:Property;
+  skos:prefLabel "unit background scanning mode";
+  skos:definition "This refers to the number of scans (or the duration in minutes) taken to collect baseline or reference data, often without the sample, to account for any background noise or interference in the measurement." .
+
+allo-res:AFR_0001074 a rdf:Property;
+  skos:prefLabel "peak position";
+  skos:definition "A peak facet that denotes the abscissa value of the extrema (maxima or minima) attributed to the peak in a data description function. The extrema is often determined through a mathematical fitting of measurement signals to eliminate spurious extrema due to noise. [Allotrope]" .
+
+allo-qual:AFQ_0000201 a rdf:Property;
+  skos:prefLabel "signal gain configuration";
+  skos:definition "This parameter is related to the calibration and sensitivty of the infrared instrument during data acquisition" .
+
+cat:backgroundScanTime a rdf:Property;
+  skos:prefLabel "background scan time";
+  skos:definition "It is the duration allocated for collecting the background signal before measuring the sample." .
+
+cat:sampleScanTime a rdf:Property;
+  skos:prefLabel "sample scan time";
+  skos:definition "It refers to the duration spent measuring the sample's spectrum during data acquisition. " .
+
+allo-res:AFR_0000951 a rdf:Property;
+  skos:prefLabel "duration";
+  skos:definition "A measure of the magnitude of the time region in which the process occurs. [Allotrope]" .
+
+allo-qual:AFQ_0000062 a rdf:Property;
+  skos:prefLabel "focal length";
+  skos:definition "A physical quality that inheres in a bearer by virtue of how strongly the bearer converges or diverges light. [Wikipedia]" .
+
+allo-res:AFR_0001595 a rdf:Property;
+  skos:prefLabel "excitation laser power setting";
+  skos:definition "The excitation laser power setting is the power of the laser beam used for exciting the sample. [Allotrope]" .
+
+cat:backwardPeakPosition a rdf:Property;
+  skos:prefLabel "backward peak position";
+  skos:definition "It refers to the specific wavenumber at which a peak in the spectrum is located, meausred from the baseline to the point of maximum intensity" .
+
+cat:backwardPeakHeight a rdf:Property;
+  skos:prefLabel "backward peak height";
+  skos:definition "It is related to the intensity of a spectral peak, focusing on how it behaves in relation to the baseline of the spectrum" .
+
+allo-equ:AFE_0000145 a rdf:Property;
+  skos:prefLabel "channel";
+  skos:definition "A communication channel or channel, refers either to a physical transmission medium such as a wire, or to a logical connection over a multiplexed medium such as a radio channel. A channel is used to convey an information signal, for example a digital bit stream, from one or several senders (or transmitters) to one or several receivers. [Wikipedia]" .
+
+cat:lowFoldingLimit a rdf:Property;
+  skos:prefLabel "low folding limit";
+  skos:definition "It refers to the lower threshold in the Fourier Transform process, below which frequency components may be aliased or folded into the measurable range. " .
+
+cat:highFoldingLimit a rdf:Property;
+  skos:prefLabel "high folding limit";
+  skos:definition "It refers to the upper threshold in the Fourier Transform process beyond which higher frequency components are 'folded' or aliased back into the measured range. " .
+
+allo-hdf:scaleFactor a rdf:Property;
+  skos:prefLabel "scale factor";
+  skos:definition "A scale factor is a numerical value that is used to multiply or divide another value, typically to adjust the magnitude or units of a measurement." .
+
+dct:date a rdf:Property;
+  skos:prefLabel "date";
+  skos:definition "A point or period of time associated with an event in the lifecycle of the resource." .
+
+cat:frequencyFirstPoint a rdf:Property;
+  skos:prefLabel "frequency first point";
+  skos:definition "In an IR spectrum, it is the starting frequency or wavenumber at which the measurement begins  (i.e. lowest frequency or highest wavenumber)." .
+
+cat:frequencyLastPoint a rdf:Property;
+  skos:prefLabel "frequency last point";
+  skos:definition "In an IR spectrum, it is the ending frequency or wavenumber at which the measurement concludes (i.e. highest frequency or lowest wavenumber)." .
+
+allo-res:AFR_0002440 a rdf:Property;
+  skos:prefLabel "minimum value";
+  skos:definition "A minimum value is a descriptive statistic that denotes the smallest value present in some dataset. [Allotrope]" .
+
+allo-res:AFR_0002441 a rdf:Property;
+  skos:prefLabel "maximum value";
+  skos:definition "A maximum value is a descriptive statistic that denotes the largest value present in some dataset. [Allotrope]" .
+
+cat:numberDataPoint a rdf:Property;
+  skos:prefLabel "number data point";
+  skos:definition "It refers to the total number of individual measurements or data samples collected across the defined frequency range during the spectrum acquisition. " .
+
+allo-res:AFR_0000952 a rdf:Property;
+  skos:prefLabel "measurement time";
+  skos:definition "The date/time of the measurement. [Allotrope]" .
+
+allo-role:AFRL_0000155 a rdf:Property;
+  skos:prefLabel "derived measure";
+  skos:definition "A derived measure is a measure that is the outcome of some indirect measurement. The derived value is derived from base measures by calculations following a formula or algorithm. [Allotrope]" .
+
+allo-res:AFR_0002663 a rdf:Property;
+  skos:prefLabel "smoothing window setting";
+  skos:definition "A smoothing window setting is a control setting that specifies the smoothing window for foam detection. [Allotrope]" .
+
+allo-res:AFR_0000186 a rdf:Property;
+  skos:prefLabel "data point";
+  skos:definition "A data point is the single measurement result of a series. [Allotrope]" .
+
+allo-res:AFR_0001732 a rdf:Property;
+  skos:prefLabel "frequency";
+  skos:definition "A frequency is a rate that quantifies the number of occurrences of some discrete event in a given amount of time. [Allotrope]" .
+
+allo-res:AFR_0002410 a rdf:Property;
+  skos:prefLabel "apodization";
+  skos:definition "Apodization is the name of a filter method used in some data apodization. [Allotrope]" .
+
+allo-res:AFR_0001199 a rdf:Property;
+  skos:prefLabel "peak resolution";
+  skos:definition "A peak facet that measures the degree of separation between the peak and another specified peak. [Allotrope]" .
+
+allo-res:AFR_0002412 a rdf:Property;
+  skos:prefLabel "phase correction";
+  skos:definition "Phase correction is the name of a method for phase correction used to adjust FT spectra. [Allotrope]" .
+
+allo-res:AFR_0002411 a rdf:Property;
+  skos:prefLabel "zero filling factor";
+  skos:definition "The factor of the size increase by time domain zero padding the Fourier transformation. [Allotrope]" .
+
+allo-equ:AFE_0000354 a rdf:Property;
+  skos:prefLabel "device";
+  skos:definition "A device is an artifact that is designed to perform a function primarily by means of its mechanical or electrical nature. [Allotrope]" .
+
+allo-res:AFR_0002389 a rdf:Property;
+  skos:prefLabel "aperture size setting";
+  skos:definition "An aperture size setting temperature setting is a control setting that specifies the size of the aperture opening. [Allotrope]" .
+
+allo-res:AFR_0002254 a rdf:Property;
+  skos:prefLabel "beamsplitter type";
+  skos:definition "A beamsplitter type is a classification datum that describes the beamsplitter type based on the compound used to split the light beam. [Allotrope]" .
+
+allo-res:AFR_0001247 a rdf:Property;
+  skos:prefLabel "detector setting";
+  skos:definition "A parameter specification specific to a detector. [Allotrope]" .
+
+cat:opticalFilterSetting a rdf:Property;
+  skos:prefLabel "optical filter setting";
+  skos:definition "Optical filter is used in spectroscopic instruments to control the wavelengths of light that reach the detector, allowing for the isolation of specific spectral regions." .
+
+allo-res:AFR_0002315 a rdf:Property;
+  skos:prefLabel "source current setting";
+  skos:definition "A source current setting is a current setting controlling the current supplied to a radiation source. [Allotrope]" .
+
+allo-res:AFR_0002251 a rdf:Property;
+  skos:prefLabel "optical velocity setting";
+  skos:definition "An optical velocity setting is a setting that specifies the velocity of the moving mirror during the run. [Allotrope]" .
+
+cat:minimaResearch a rdf:Property;
+  skos:prefLabel "minima research";
+  skos:definition "A 'yes' response to 'search for minima' confirms a transmittance spectrum, where absorption features appear as valleys. A 'no' response indicates an absorbance spectrum, where absorption features are represented as peaks." .
+
+cat:peakNumber a rdf:Property;
+  skos:prefLabel "peak number";
+  skos:definition "Number of distinct peaks observed in a chromatogram or spectrum during an analysis." .
+
+allo-prop:AFX_0000059 a rdf:Property;
+  skos:prefLabel "sensitivity";
+  skos:definition "The slope of the calibration curve. If the curve is in fact a 'curve', rather than a straight line, then of course sensitivity will be a function of analyte concentration or amount. If sensitivity is to be a unique performance characteristic, it must depend only on the chemical measurement process, not upon scale factors. [IUPAC Gold Book]" .
+
+cat:upperLimitScanRange a rdf:Property;
+  skos:prefLabel "upper limit scan range";
+  skos:definition "A detector scan range setting is a detector setting that sets the wavenumber range of scans, setting the upper limit." .
+
+cat:lowerLimitScanRange a rdf:Property;
+  skos:prefLabel "lower limit scan range";
+  skos:definition "A detector scan range setting is a detector setting that sets the wavenumber range of scans, setting the lower limit." .
+
+cat:peakSpectroscopy a rdf:Property;
+  skos:prefLabel "peak spectroscopy";
+  skos:definition "A peak in spectroscopy corresponds to a specific wavelength, frequency, or energy absorption/emission associated with molecular vibrations, electronic transitions, or nuclear interactions. The position and intensity of these peaks provide structural information about the molecule, such as functional groups, bond types, and electronic environments." .
+
+allo-res:AFR_0002538 a rdf:Property;
+  skos:prefLabel "absolute intensity";
+  skos:definition "Absolute intensity (datum) is a quantity facet that quantifies the absolute magnitude of a signal. [Allotrope]" .
+
+allo-res:AFR_0001588 a rdf:Property;
+  skos:prefLabel "intensity";
+  skos:definition "Intensity (datum) is a quantity facet that quantifies the relative magnitude of a signal. [Allotrope]" .
+
+allo-res:AFR_0001266 a rdf:Property;
+  skos:prefLabel "peak width at half height";
+  skos:definition "The peak width calculated at half of the peak height. [Allotrope]" .
+
+allo-res:AFR_0001692 a rdf:Property;
+  skos:prefLabel "height threshold for peak integration setting (chromatography)";
+  skos:definition "A data processing setting that sets a minimum or maximum height for a peak to be included in the integrated peak list. [Allotrope]" .
+
+allo-res:AFR_0001694 a rdf:Property;
+  skos:prefLabel "shoulder detection enabled setting (chromatography)";
+  skos:definition "A data processing setting that allows the integration process to interpolate a baseline for the smaller peak of overlapping peaks for the time period specified. [Allotrope]" .
+
+cat:xUnits a rdf:Property ;
+  skos:prefLabl "x units" ;
+  skos:definition "It refers to the units used for the x-axis in the spectrum. In IR spectroscopy, it typically represent the frequency or wavenumber." .
+
 schema:contentUrl a rdf:Property ;
     skos:prefLabel "content URL" ;
     skos:definition "A url pointing to the actual bytes of the media object, for example the agilent data file." ;
@@ -815,6 +1059,7 @@ cat:Sample a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path cat:hasPlate ; sh:class cat:Plate] ; # hasPlate
     sh:property [sh:path cat:hasSample ; sh:class cat:Sample] ; #hasSample
     sh:property [sh:path cat:hasChemical ; sh:class obo:CHEBI_25367 ] ; #hasChemical
+    sh:property [sh:path allo-res:AFR_0000432 ; sh:class cat:PeakList ] ; #peak list
     .
 
 cat:Product a sh:NodeShape, rdfs:Class ;
@@ -1029,10 +1274,36 @@ cat:ProcessedDataDocument a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path allo-res:AFR_0000432 ; sh:class cat:PeakList ] ; #peak list
     .
 
-cat:PeakList a rdfs:Class, sh:NodeShape ;
-    skos:prefLabel "Peak List" ;
-    skos:definition "A collection of peaks identified in chromatograms or spectra, typically used for further analysis in experiments." ;
-    sh:property [sh:path cat:peak ; sh:class allo-res:AFR_0000413] ; #peak
+allo-res:AFR_0000413 a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Peak" ;
+    skos:definition "A peak describes a part of a spectrum/chromatogram/plot at a definite range of the experimental parameter (independent variable) of the spectrum. This definition includes a single data point of the spectrum. [Allotrope]" ;
+    sh:property [sh:path allo-dchdf:Index ; sh:datatype xsd:integer] ; #index
+    sh:property [sh:path allo-res:AFR_0001073 ; sh:class cat:PeakArea] ; #peak area
+    sh:property [sh:path allo-res:AFR_0001089 ; sh:class cat:RetentionTime ] ; #retentiontime
+    sh:property [sh:path allo-res:AFR_0001164 ; sh:datatype xsd:string ] ; #peak identifier
+    sh:property [sh:path allo-res:AFR_0001178 ; sh:class cat:PeakStart] ; #peak start
+    sh:property [sh:path allo-res:AFR_0001180 ; sh:class cat:PeakEnd] ; #peak end
+    sh:property [sh:path allo-res:AFR_0000948 ; sh:class cat:PeakHeight] ; #peak height
+    sh:property [sh:path allo-res:AFR_0000949 ; sh:class cat:RelativePeakHeight] ; #relative peak height
+    sh:property [sh:path allo-res:AFR_0001179 ; sh:class cat:PeakValueAtStart] ; #peak value at start
+    sh:property [sh:path allo-res:AFR_0001181 ; sh:class cat:PeakValueAtEnd] ; #peak value at end 
+    sh:property [sh:path allo-res:AFR_0001165 ; sh:class cat:RelativePeakArea] ; #relative peak area
+    sh:property [sh:path allo-res:AFR_0002551 ; sh:class cat:ThreeDimensionalUltravioletSpectrumDataCube] ; #three-dimensional ultraviolet spectrum data cube
+    sh:property [sh:path allo-res:AFR_0002878 ; sh:class cat:ThreeDimensionalMassSpectrumDataCube] ; #three-dimensional mass spectrum data cube
+    .
+
+cat:Agilent-Peak a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Agilent Peak" ;
+    skos:definition "A peak identified in an Agilent chromatogram or spectrum, typically used for further analysis in experiments." ;
+    rdfs:subClassOf allo-res:AFR_0000413 ;
+    .
+
+cat:UV-IR-NMR-Peak a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "UV-IR-NMR Peak" ;
+    skos:definition "A peak identified in a UV, IR, or NMR spectrum, typically used for further analysis in experiments." ;
+    rdfs:subClassOf allo-res:AFR_0000413 ;
+    sh:property [sh:path allo-res:AFR_0002526 ; sh:class cat:DeviceSystemDocument ] ; #device system document
+    sh:property [sh:path allo-res:AFR_0001976 ; sh:datatype xsd:string] ; #asset management identifier
     .
 
 allo-res:AFR_0000413 a rdfs:Class, sh:NodeShape ;
@@ -1195,3 +1466,338 @@ cat:vialShape a sh:PropertyShape ;
         [ sh:hasValue "sample vial" ]
         [ sh:hasValue "other" ]
     ) .
+
+
+##########################################################################################
+# IR stuff
+
+allo-res:AFR_0002261 a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Transmittance" ;
+    skos:definition "A transmittance is a quality quantification facet that quantifies the ratio of the transmitted radiant power (P_λ) to that incident on the sample (P0_λ): T = P_λ/ P0_λ. [IUPAC]" ;
+    sh:node cat:dataParameterTRShape;
+    .
+
+cat:singleChannelSampleSpectrum a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Single Channel Sample Spectrum" ;
+    skos:definition "It refers to the raw infrared spectrum collected directly from the sample without any background or reference correction. This spectrum represents the intensity of IR light that the sample transmits or absorbs at each wavelength." ;
+    sh:node cat:dataParameterShape ;
+    .
+
+
+cat:singleChannelRefBlock a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Single Channel Reference Block" ;
+    skos:definition "It refers to the spectrum collected from the background measurement. This reference spectrum captures the baseline IR intensity, allowing for comparison and correction when analyzing the sample spectrum." ;
+    sh:node cat:dataParameterShape ;
+    .
+
+allo-res:AFR_0002008 a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Reference" ;
+    skos:definition "A reference is an information content entity that is referred to in another information content entity for the purpose of comparison. [Allotrope]" ;
+    
+    .
+
+cat:dataParameterShape a sh:NodeShape ;
+    sh:property cat:numberDataPointShape ;
+    sh:property cat:frequencyFirstPointShape ;
+    sh:property cat:frequencyLastPointShape ;
+    sh:property cat:scaleFactorShape ;
+    sh:property cat:maximumShape ;
+    sh:property cat:minimumShape ;
+    sh:property cat:dateShape ;
+    sh:property cat:timeShape ;
+    sh:property cat:xUnitsShape ;
+.
+    
+
+cat:numberDataPointShape a sh:PropertyShape ;
+    sh:path allo-res:AFR_0000186 ;
+    sh:datatype xsd:integer ;
+    .
+
+cat:frequencyFirstPointShape a sh:PropertyShape ;
+    sh:path allo-res:AFR_0001732 ;
+    sh:datatype xsd:double ;
+    .
+
+cat:frequencyLastPointShape a sh:PropertyShape ;
+    sh:path allo-res:AFR_0001732 ;
+    sh:datatype xsd:double ;
+    .
+
+cat:scaleFactorShape a sh:PropertyShape ;
+    sh:path allo-hdf:scaleFactor ;
+    sh:datatype xsd:double ;
+    .
+cat:maximumShape a sh:PropertyShape ;
+    sh:path allo-res:AFR_0002441 ;
+    .
+
+cat:minimumShape a sh:PropertyShape ;
+    sh:path allo-res:AFR_0002440 ;
+    .
+
+cat:dateShape a sh:PropertyShape ;
+    sh:path dct:date ;
+    .
+
+cat:timeShape a sh:PropertyShape ;
+    sh:path allo-res:AFR_0000952 ;
+    sh:datatype xsd:dateTime ;
+    .
+
+cat:xUnitsShape a sh:PropertyShape ;
+    sh:path cat:xUnits ;
+    sh:xone ([ sh:hasValue "WN" ] 
+            [sh:hasValue "MI" ] 
+            [sh:hasValue "NM" ] 
+            [sh:hasValue "LGW" ] 
+            [sh:hasValue "MIN" ] 
+            [sh:hasValue "SEC" ] 
+            [sh:hasValue "PNT" ] 
+            [sh:hasValue "EV" ] 
+            [sh:hasValue "MM" ] 
+            [sh:hasValue "CM"]
+            [sh:hasValue "MIS"]
+            [sh:hasValue "MUS"])#TODO make into qudt units
+    .
+
+allo-proc:AFP_0003095 a sh:NodeShape, rdfs:Class ;
+    skos:prefLabel "Acquisition Parameters" ;
+    sh:property [ sh:path allo-res:AFR_0002045 ;
+                sh:xone ([ sh:hasValue "SN" ] 
+            [sh:hasValue "DN" ] 
+            [sh:hasValue "SF" ] 
+            [sh:hasValue "SD" ] 
+            [sh:hasValue "DD" ] 
+            [sh:hasValue "DF" ]) ] ;
+    sh:property [ sh:path cat:correlationMode ;
+                sh:xone ([ sh:hasValue "NO" ]
+                        [ sh:hasValue "LO" ]
+                        [ sh:hasValue "HI"]
+                        [ sh:hasValue "FUL" ]);] ;
+    sh:property [ sh:path allo-res:AFR_0002612 ;
+                sh:node [sh:property [sh:path qudt:unit ;
+                        sh:hasValue unit:SEC] ;]
+                        ] ;
+    
+    sh:property [ sh:path cat:stabilizationDelay ;
+                sh:node [sh:property [sh:path qudt:unit ;
+                        sh:hasValue unit:SEC] ;]
+                        ] ;
+
+    sh:property [ sh:path allo-res:AFR_0002998 ;
+                sh:node [sh:property [sh:path qudt:unit ;
+                            sh:hasValue unit:PER-CentiM] ;]
+                            ] ;
+    sh:property [ sh:path allo-res:AFR_0002999 ;
+                sh:node [sh:property [sh:path qudt:unit ;
+                            sh:hasValue unit:PER-CentiM] ;]
+                            ] ;
+    sh:property [ sh:path cat:backgroundScans ; 
+                sh:node [sh:property [sh:path qudt:unit ;
+                            sh:hasValue unit:Count] ;]
+                            ] ;
+    sh:property [ sh:path allo-res:AFR_0003051 ];
+    sh:property [ sh:path allo-res:AFR_0000251 ];
+    sh:property [ sh:path allo-res:AFR_0001619 ;
+                sh:node [sh:property [sh:path qudt:unit ;
+                            sh:hasValue unit:PER-CentiM] ;]
+                            ] ;
+    sh:property [ sh:path cat:signalGainBackground ;
+                 sh:minInclusive -1 ;
+                 sh:maxInclusive 7 ;] ;
+    sh:property [ sh:path cat:signalGainSample ;
+                sh:minInclusive -1 ;
+                sh:maxInclusive 7 ;] ;
+    sh:property [ sh:path cat:unitSampleScanningMode ; sh:datatype xsd:boolean ] ;
+    sh:property [ sh:path cat:unitBackgroundScanningMode ; sh:datatype xsd:boolean ] ;
+.
+
+allo-role:AFRL_0000028 a sh:NodeShape, rdfs:Class ;
+    skos:prefLabel "Setting datum" ;
+    skos:definition "Setting datum is the contextual role of an information object that specifies some device or process setting. [Allotrope]" ;
+    sh:property [sh:path allo-hdf:scaleFactor ; ] ; 
+    sh:property [sh:path dct:date ; ] ;
+    sh:property [sh:path cat:frequencyFirstPoint ; 
+                    sh:node [sh:property [sh:path qudt:unit ;
+                                            sh:hasValue unit:PER-CentiM]]] ;
+    sh:property [sh:path cat:frequencyLastPoint ; 
+                    sh:node [sh:property [sh:path qudt:unit ;
+                                            sh:hasValue unit:PER-CentiM]]] ;
+    sh:property [sh:path allo-res:AFR_0002440 ; #minimum value
+                    sh:node [sh:property [sh:path qudt:unit ;
+                                            sh:hasValue unit:Percent]]] ;
+    sh:property [sh:path allo-res:AFR_0002441 ; #maximum value
+                    sh:node [sh:property [sh:path qudt:unit ;
+                                            sh:hasValue unit:Percent]]] ; 
+    sh:property [sh:path cat:numberDataPoint ; ] ;
+    sh:property cat:xUnitsShape ;
+    sh:property [sh:path allo-res:AFR_0000952 ; ] ; #measurement time
+    sh:property [sh:path allo-role:AFRL_0000155 ; ] ; #derived measure
+    sh:property [sh:path allo-res:AFR_0002663 ; ] ; #smoothing window setting
+.
+
+allo-proc:AFP_0002680 a sh:NodeShape, rdfs:Class ;
+    skos:prefLabel "Assay" ;
+    skos:altLabel "Analysis", "Measurement Method" ;
+    skos:definition "A planned process with the objective to produce information about the material entity that is the evaluant, by physically examining it or its proxies. [OBI]" ;
+    sh:property [sh:path allo-res:AFR_0001164 ; ] ; #peak identifier
+.
+
+cat:FTparameter a sh:NodeShape, rdfs:Class ;
+    skos:prefLabel "Fourier Transform Parameter" ;
+    skos:definition "It refers to the settings and specifications used for the Fourier Transform (FT) process in infrared spectroscopy. These parameters control how the raw interferogram data, collected in the time domain, is converted into a frequency (wavenumber) spectrum." ;
+    sh:property [sh:path allo-res:AFR_0002410 ;
+            sh:xone (
+                        [ sh:hasValue "BX" ]
+                        [ sh:hasValue "TR" ]
+                        [ sh:hasValue "4P" ]
+                        [ sh:hasValue "HG" ]
+                        [ sh:hasValue "B3" ]
+                        [ sh:hasValue "B4" ]
+                        [ sh:hasValue "NBW" ]
+                        [ sh:hasValue "NBM" ]
+                        [ sh:hasValue "NBS" ]
+                        [ sh:hasValue "US1" ]
+                        [ sh:hasValue "US2" ]
+                    )
+            ] ;
+    sh:property [sh:path allo-res:AFR_0002998 ;
+                sh:node [sh:property [sh:path qudt:unit ;
+                                            sh:hasValue unit:PER-CentiM]]] ;
+    sh:property [sh:path allo-res:AFR_0002999 ;
+                sh:node [sh:property [sh:path qudt:unit ;
+                                            sh:hasValue unit:PER-CentiM]]] ;
+    sh:property [sh:path allo-res:AFR_0001199 ;] ;
+    sh:property [sh:path allo-res:AFR_0002412 ;
+                sh:xone (
+                    [ sh:hasValue "ML" ]
+                    [ sh:hasValue "SM" ]
+                    [ sh:hasValue "PW" ]
+                    [ sh:hasValue "MLP" ]
+                    [ sh:hasValue "SMP" ]
+                    [ sh:hasValue "PWP" ]
+                    [ sh:hasValue "MS" ]
+                    [ sh:hasValue "NO" ]
+                )
+            ] ;
+    sh:property [sh:path allo-res:AFR_0002411 ;
+                sh:xone (
+                    [ sh:hasValue "1" ]
+                    [ sh:hasValue "2" ]
+                    [ sh:hasValue "4" ]
+                    [ sh:hasValue "8" ]
+                    [ sh:hasValue "16" ]
+                    [ sh:hasValue "32" ]
+                    [ sh:hasValue "64" ]
+                    [ sh:hasValue "128" ]
+                    [ sh:hasValue "256" ]
+                    [ sh:hasValue "512" ]
+                )
+            ] .
+
+cat:DeviceAquisitionMethod a sh:NodeShape, rdfs:Class ;
+    skos:prefLabel "device acquisition method_Rf" ;
+    skos:definition "A device acquistion method is a machine readable plan specification that specifies how the acquisition software of an instrument is to execute the instrument's portion of an analysis. [Allotrope]" ;
+    sh:property [ sh:path allo-res:AFR_0001074 ; 
+                    sh:node [sh:property [sh:path qudt:unit ;
+                                                sh:hasValue unit:PER-CentiM]]] ;
+    sh:property [ sh:path allo-qual:AFQ_0000201 ; ] ;
+    sh:property [ sh:path cat:backgroundScanTime ; ] ;
+    sh:property [ sh:path cat:sampleScanTime ; ] ;
+    sh:property [ sh:path allo-res:AFR_0000951 ; ] ;
+    sh:property [ sh:path allo-qual:AFQ_0000062 ; ] ;
+    sh:property [ sh:path allo-res:AFR_0002568 ; ] ;
+    sh:property [ sh:path allo-res:AFR_0001595 ; 
+                    sh:node [sh:property [sh:path qudt:unit ;
+                                            sh:hasValue unit:PER-CentiM]]] ;
+    sh:property [ sh:path allo-res:AFR_0000948 ; ] ;
+    sh:property [ sh:path cat:backwardPeakPosition ; ] ;
+    sh:property [ sh:path cat:backwardPeakHeight; ] ;
+    sh:property [ sh:path allo-res:AFR_0001074 ; 
+                    sh:node [sh:property [sh:path qudt:unit ;
+                                            sh:hasValue unit:PER-CentiM]]] ;
+    sh:property [ sh:path allo-equ:AFE_0000145 ; ] ;
+    sh:property [ sh:path cat:lowFoldingLimit ;                 
+                    sh:node [sh:property [sh:path qudt:unit ;
+                                            sh:hasValue unit:PER-CentiM]]] ;
+    sh:property [ sh:path cat:highFoldingLimit ; 
+                    sh:node [sh:property [sh:path qudt:unit ;
+                                            sh:hasValue unit:PER-CentiM]]] ;
+.
+
+cat:opticParameter_Rf a sh:NodeShape, rdfs:Class ;
+    skos:prefLabel "Optical Parameter" ;
+    skos:definition "It refers to the settings that define the configuration and operation of the optical components in the spectrometer. These parameters helps optimize spectral quality based on the sample characteristics and measurement goals." ;
+    sh:property [ sh:path allo-equ:AFE_0000354 ; 
+
+            ] ;
+    sh:property [ sh:path allo-res:AFR_0002389 ; 
+                sh:node [sh:property [sh:path qudt:unit ;
+                                        sh:hasValue unit:Millimeter]]] ;
+    sh:property [ sh:path allo-res:AFR_0002254 ; 
+
+            ] ;
+    sh:property [ sh:path allo-res:AFR_0001247 ; 
+
+            ] ;
+    sh:property [ sh:path allo-res:AFR_0001595 ; 
+
+            ] ;
+    sh:property [ sh:path cat:opticalFilterSetting ; 
+                sh:xone (
+                    [ sh:hasValue "open" ]
+                    [ sh:hasValue "close" ]
+                )
+            ] ;
+    sh:property [ sh:path allo-res:AFR_0002315 ; 
+
+            ] ;
+    sh:property [ sh:path allo-res:AFR_0002251 ; 
+
+            ] .
+
+
+cat:PeakList a rdfs:Class, sh:NodeShape ;
+    skos:prefLabel "Peak List" ;
+    skos:definition "A peak list is a collection of peaks identified in a spectrum or chromatogram, typically used for further analysis in experiments." ;
+    sh:property [ sh:path allo-res:AFR_0001606 ;] ;
+    sh:property [ sh:path cat:minimaResearch ; ] ;
+    sh:property [ sh:path cat:peak ; sh:class allo-res:AFR_0000413  ; ] ;
+    sh:property [ sh:path cat:peakNumber ; ] ;
+    sh:property [ sh:path allo-prop:AFX_0000059 ; 
+                    sh:node [sh:property [sh:path qudt:unit ;
+                                            sh:hasValue unit:PERCENT]]] ;
+    sh:property [ sh:path cat:upperLimitScanRange ; 
+                sh:node [sh:property [sh:path qudt:unit ;
+                                            sh:hasValue unit:PER-CentiM]]] ;
+    sh:property [ sh:path cat:lowerLimitScanRange ; 
+                sh:node [sh:property [sh:path qudt:unit ;
+                                            sh:hasValue unit:PER-CentiM]]] ;
+    sh:property [ sh:path allo-res:AFR_0000948 ; 
+                sh:node [sh:property [sh:path qudt:unit ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:xone ([ sh:hasValue unit:PERCENT ] 
+                    [sh:hasValue unit:UNITLESS] )]]] ;
+
+    sh:property [ sh:path allo-res:AFR_0000949 ; 
+                sh:node [sh:property [sh:path qudt:unit ;
+                                            sh:hasValue unit:PERCENT]]] ;
+    sh:property [ sh:path cat:peakSpectroscopy ; 
+                sh:node [sh:property [sh:path qudt:unit ;
+                                            sh:hasValue unit:PER-CentiM]]] ;
+    sh:property [ sh:path allo-res:AFR_0002538 ; 
+                sh:node [sh:property [sh:path qudt:unit ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:xone ([ sh:hasValue unit:PERCENT ] 
+                    [sh:hasValue unit:UNITLESS] )]]] ;
+    sh:property [ sh:path allo-res:AFR_0001588 ; 
+                sh:node [sh:property [sh:path qudt:unit ;
+                                            sh:hasValue unit:PERCENT]]] ;
+    sh:property [ sh:path allo-res:AFR_0001266 ; 
+                sh:node [sh:property [sh:path qudt:unit ;
+                                            sh:hasValue unit:PER-CentiM]]] ;
+    sh:property [ sh:path allo-res:AFR_0001692 ; ] ;
+    sh:property [ sh:path allo-res:AFR_0001694 ; ] .
