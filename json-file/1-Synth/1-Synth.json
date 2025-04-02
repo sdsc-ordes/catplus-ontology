@@ -47,32 +47,83 @@
             },
             "equipmentName": "Chemspeed SWING XL",
             "subEquipmentName": "GDU-V",
-            "hasWell": [
-                {
-                    "position": "A1",
-                    "containerID": "1",
-                    "quantity": {
-                        "value": 1,
-                        "unit": "mg",
-                        "errorMargin": {
-                            "value": 0.05,
-                            "unit": "mg"
-                        }
-                    }
-                },
-                {
-                    "position": "B1",
-                    "containerID": "1",
-                    "quantity": {
-                        "value": 4,
-                        "unit": "mg",
-                        "errorMargin": {
-                            "value": 0.02,
-                            "unit": "mg"
-                        }
+            "atWell": {
+                "position": "A1",
+                "containerID": "1",
+                "quantity": {
+                    "value": 1,
+                    "unit": "mg",
+                    "errorMargin": {
+                        "value": 0.05,
+                        "unit": "mg"
                     }
                 }
-            ],
+            },
+            "startTime": "2024-07-25T12:00:13",
+            "endingTime": "2024-07-25T12:00:17",
+            "methodName": "addition",
+            "dispenseState": "Liquid",
+            "dispenseType": "volume",
+            "hasSample": {
+                "expectedDatum": {
+                    "value": 2,
+                    "unit": "mg"
+                },
+                "containerID": "17",
+                "containerBarcode": "17",
+                "vialID": "15",
+                "vialType": "storage vial",
+                "role": "solvent",
+                "hasSample": [
+                    {
+                        "sampleID": "123",
+                        "role": "solvent",
+                        "internalBarCode": "1",
+                        "physicalState": "Liquid",
+                        "hasChemical": {
+                            "chemicalID": "134",
+                            "chemicalName": "Toluene",
+                            "CASNumber": "108-88-3",
+                            "molecularMass": {
+                                "value": 92.14,
+                                "unit": "g/mol"
+                            },
+                            "smiles": "CC1=CC=CC=C1",
+                            "Inchi": "1S/C7H8/c1-7-5-3-2-4-6-7/h2-6H,1H3",
+                            "molecularFormula": "C7H8",
+                            "density": {
+                                "value": 0.8623,
+                                "unit": "g/mL"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "actionName": "AddAction",
+            "speedShaker": {
+                "value": 152,
+                "unit": "rpm",
+                "errorMargin": {
+                    "value": 1,
+                    "unit": "rpm"
+                }
+            },
+            "equipmentName": "Chemspeed SWING XL",
+            "subEquipmentName": "GDU-V",
+            "atWell": {
+                "position": "B1",
+                "containerID": "1",
+                "quantity": {
+                    "value": 4,
+                    "unit": "mg",
+                    "errorMargin": {
+                        "value": 0.02,
+                        "unit": "mg"
+                    }
+                }
+            },
             "startTime": "2024-07-25T12:00:13",
             "endingTime": "2024-07-25T12:00:17",
             "methodName": "addition",
