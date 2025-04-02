@@ -50,13 +50,13 @@
             "atWell": {
                 "position": "A1",
                 "containerID": "1",
-                "quantity": {
-                    "value": 1,
-                    "unit": "mg",
-                    "errorMargin": {
-                        "value": 0.05,
-                        "unit": "mg"
-                    }
+            },
+            "quantity": {
+                "value": 1,
+                "unit": "mg",
+                "errorMargin": {
+                    "value": 0.05,
+                    "unit": "mg"
                 }
             },
             "startTime": "2024-07-25T12:00:13",
@@ -115,13 +115,13 @@
             "atWell": {
                 "position": "B1",
                 "containerID": "1",
-                "quantity": {
-                    "value": 4,
-                    "unit": "mg",
-                    "errorMargin": {
-                        "value": 0.02,
-                        "unit": "mg"
-                    }
+            },
+            "quantity": {
+                "value": 4,
+                "unit": "mg",
+                "errorMargin": {
+                    "value": 0.02,
+                    "unit": "mg"
                 }
             },
             "startTime": "2024-07-25T12:00:13",
