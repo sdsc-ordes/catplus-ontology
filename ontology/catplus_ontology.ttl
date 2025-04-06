@@ -24,7 +24,6 @@ prefix allo-proc: <http://purl.allotrope.org/ontologies/process#>
 prefix allo-role: <http://purl.allotrope.org/ontologies/role#>
 prefix allo-com: <http://purl.allotrope.org/ontologies/common#>
 prefix allo-mat: <http://purl.allotrope.org/ontologies/material#>
-prefix obo: <http://purl.obolibrary.org/obo/>
 prefix qb: <http://purl.org/linked-data/cube#> 
 prefix quantitykind: <http://qudt.org/vocab/quantitykind/>
 prefix qudt-ext: <http://purl.allotrope.org/ontology/qudt-ext/unit#>
@@ -330,7 +329,7 @@ allo-prop:AFX_0000211 a rdf:Property ;
 
 obo:PATO_0001019 a rdf:Property ;
     skos:prefLabel "mass density" ;
-    skos:definition "A physical quality which inheres in a bearer by virtue of some influence is exerted by the bearer's mass per unit size." ; 
+    skos:definition "A physical quality which inheres in a bearer by virtue of some influence is exerted by the bearer's mass per unit size." ;
     .
 
 cat:volumeEvaporationFinal a rdf:Property ;
@@ -856,18 +855,15 @@ obo:CHEBI_25367 a rdfs:Class, sh:NodeShape ;
     sh:property [sh:path cat:casNumber ; sh:datatype xsd:string] ;
     sh:property [sh:path allo-res:AFR_0002292 ; sh:datatype xsd:string] ; #chemical name
     sh:property [sh:path allo-res:AFR_0002295 ; sh:datatype xsd:string] ; #smiles
-    sh:property [sh:path allo-res:AFR_0002294 ;
-                sh:node [sh:property [sh:path qudt:unit ;
-                                        sh:hasValue unit:GM-PER-MOL]]] ; #molecularMass
+    sh:property [sh:path cat:molecularMassInGmPerMol] ; #molecularMass
     sh:property [sh:path schema:keywords ; sh:datatype xsd:string] ; #keywords
     sh:property [sh:path allo-res:AFR_0001952 ; sh:datatype xsd:string] ; #molecular formula
     sh:property [sh:path allo-res:AFR_0002296 ; sh:datatype xsd:string] ; #inchi key
-    sh:property [sh:path obo:PATO_0001019 ;
-                 sh:node [sh:property [sh:path qudt:unit ;
-                                        sh:hasValue unit:GM-PER-MilliL]]] ; #mass densitity
+    sh:property [sh:path cat:densityInGmPerMilliL] ; #mass densitity
     skos:prefLabel "molecule" ;
     skos:definition "Any polyatomic entity that is an electrically neutral entity consisting of more than one atom." ;
     .
+
 
 obo:IAO_0000005 a rdfs:Class , sh:NodeShape ;
     skos:prefLabel "Objective" ;
@@ -1177,6 +1173,18 @@ cat:temperatureInDegC a sh:PropertyShape ;
     sh:path allo-prop:AFX_0000060 ;
     sh:node cat:Observation ;
     sh:property [sh:path qudt:unit ; sh:hasValue unit:DEG_C] ;
+    .
+
+cat:densityInGmPerMilliL a sh:PropertyShape ; #mass densitity
+    sh:path obo:PATO_0001019 ;
+    sh:node cat:Observation ;
+    sh:property [sh:path qudt:unit ; sh:hasValue unit:GM-PER-MilliL] ;
+    .
+
+cat:molecularMassInGmPerMol a sh:PropertyShape ; #mocelular mass
+    sh:path allo-res:AFR_0002294 ;
+    sh:node cat:Observation ;
+    sh:property [sh:path qudt:unit ; sh:hasValue unit:GM-PER-MOL] ;
     .
 
 cat:vialShape a sh:PropertyShape ;
