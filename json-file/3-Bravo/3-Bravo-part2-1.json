@@ -162,6 +162,7 @@
             "atWell": {
                 "containerID": "157",
                 "containerBarcode": "1234858858754848",
+                "position": "A2",
                 "productIdentification": {
                     "sampleID": "1-A1",
                     "peakIdentifier": "511359d7-df0d-4018-bfee-ff58585b5809"
