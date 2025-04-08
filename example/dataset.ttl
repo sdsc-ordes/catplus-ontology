@@ -1,0 +1,46 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cat: <http://example.org/cat#> .
+@prefix schema: <https://schema.org/> .
+@prefix allocom: <http://purl.allotrope.org/ontologies/common#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+
+<https://catplus/b3d13c3a-61f0-4ee9-875a-c6a0e0298dbc> a dcat:Dataset ;
+    dct:description "Cat+ Experiment" ;
+    cat:campaignName: "Caffeine Synthesis",
+    cat:campaignClass "Standard Research";
+    cat:campaignType "optimization";
+    cat:genericObjective "High caffeine yield at the end";
+    cat:hasObjective [ a obo:IAO_0000005;
+      cat:criteria "Yield ≥ 90%";
+      allocom:AFC_0000090 "Reflux in acetone with methyl iodide and potassium carbonate";
+      schema:description "Optimize reaction conditions to maximize caffeine yield from theobromine using methyl iodide";
+      schema:name "Maximize caffeine formation"];
+    dct:issued "2025-04-07T00:00:00"^^xsd:dateTime ;
+    dct:language "en" ;
+    dct:modified "2025-04-07T00:00:00"^^xsd:dateTime ;
+    dct:publisher <https://www.epfl.ch/research/facilities/swisscat/> ;
+    dct:title "Caffeine Synthesis";
+    dcat:contactPoint [ a vcard:Organization ;
+            vcard:fn "Jean-Charles Cousty" ;
+            vcard:hasEmail <mailto:jean-charles.cousty@epfl.ch> ];
+    dcat:distribution <https://catplus/dataset/b3d13c3a-61f0-4ee9-875a-c6a0e0298dbc/resource/19b25e06-02b7-4271-8096-c069592848e1> ;
+    dcat:keyword "Research",
+        "Caffeine"@de,
+        " Synthesis"@de ;
+    dcat:landingPage <https://catplus/dataset/b3d13c3a-61f0-4ee9-875a-c6a0e0298dbc> .
+<https://catplus/dataset/b3d13c3a-61f0-4ee9-875a-c6a0e0298dbc/resource/19b25e06-02b7-4271-8096-c069592848e1> a dcat:Distribution ;
+    dct:description "HCI File" ;
+    dct:title "HCI File of CatPlus";
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF> ;
+    dct:issued "2025-04-07T00:00:00"^^xsd:dateTime ;
+    dct:license <http://dcat-ap.ch/vocabulary/licenses/terms_by> ;
+    dct:modified "2025-04-07T00:00:00"^^xsd:dateTime ;
+    dct:conformsTo cat:Ontology;
+    dcat:mediaType <http://www.iana.org/assignments/media-types/text/rdf> .
+    dcat:accessURL <https://s3-url/to/hci/file> .
+
+<http://dcat-ap.ch/vocabulary/licenses/terms_by> a dct:LicenseDocument,
+    dct:RightsStatement .
